@@ -22,6 +22,7 @@ namespace VodopriborUchet
         public string kod_BTI { get; set; }
         public string flat_id { get; set; }
         public string comment { get; set; }
+        public Nullable<int> owner_id { get; set; }
     
         public virtual net net { get; set; }
     }

@@ -3,163 +3,164 @@
 <edmx:Runtime>
 <!-- SSDL content -->
 <edmx:StorageModels>
-<Schema Namespace="db_sqlceModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="db_sqlceModelStoreContainer">
-    <EntitySet Name="category_pay_type" EntityType="db_sqlceModel.Store.category_pay_type" store:Type="Tables" />
-    <EntitySet Name="counters" EntityType="db_sqlceModel.Store.counters" store:Type="Tables" />
-    <EntitySet Name="counters_type" EntityType="db_sqlceModel.Store.counters_type" store:Type="Tables" />
-    <EntitySet Name="net" EntityType="db_sqlceModel.Store.net" store:Type="Tables" />
-    <EntitySet Name="object_type" EntityType="db_sqlceModel.Store.object_type" store:Type="Tables" />
-    <EntitySet Name="objects_place" EntityType="db_sqlceModel.Store.objects_place" store:Type="Tables" />
-    <EntitySet Name="owners" EntityType="db_sqlceModel.Store.owners" store:Type="Tables" />
-    <EntitySet Name="recorder_type" EntityType="db_sqlceModel.Store.recorder_type" store:Type="Tables" />
-    <EntitySet Name="resource_type" EntityType="db_sqlceModel.Store.resource_type" store:Type="Tables" />
-    <EntitySet Name="units" EntityType="db_sqlceModel.Store.units" store:Type="Tables" />
-    <EntitySet Name="users" EntityType="db_sqlceModel.Store.users" store:Type="Tables" />
-    <EntitySet Name="users_type" EntityType="db_sqlceModel.Store.users_type" store:Type="Tables" />
-    <AssociationSet Name="fk_net_id" Association="db_sqlceModel.Store.fk_net_id">
-      <End Role="net" EntitySet="net" />
-      <End Role="objects_place" EntitySet="objects_place" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="category_pay_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" MaxLength="1" />
-    <Property Name="pay_rate" Type="float" Nullable="false" />
-  </EntityType>
-  <EntityType Name="counters">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="date_start" Type="datetime" />
-    <Property Name="date_end" Type="datetime" />
-    <Property Name="chnannel" Type="int" />
-    <Property Name="objects_place_id" Type="int" />
-    <Property Name="owner_id" Type="int" />
-    <Property Name="date_act" Type="datetime" />
-    <Property Name="value_act" Type="float" />
-    <Property Name="net_id" Type="int" />
-    <Property Name="serial_amspi" Type="nvarchar" MaxLength="25" />
-    <Property Name="serial_r1" Type="nvarchar" MaxLength="25" />
-    <Property Name="serial_r2" Type="nvarchar" MaxLength="25" />
-    <Property Name="date_calibration_r1" Type="datetime" />
-    <Property Name="date_calibration_r2" Type="datetime" />
-    <Property Name="date_init_calibration_r2" Type="datetime" />
-    <Property Name="date_init_calibration_r1" Type="datetime" />
-    <Property Name="date_calibration_amspi" Type="datetime" />
-    <Property Name="diameter_r1" Type="int" />
-    <Property Name="diameter_r2" Type="int" />
-  </EntityType>
-  <EntityType Name="counters_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="resource_type_id" Type="int" Nullable="false" />
-    <Property Name="units_per_impulse" Type="float" />
-  </EntityType>
-  <EntityType Name="net">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="commnet" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <EntityType Name="object_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="comment" Type="nvarchar" MaxLength="1" />
-  </EntityType>
-  <EntityType Name="objects_place">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="object_type_id" Type="int" />
-    <Property Name="objects_place_id" Type="int" />
-    <Property Name="net_id" Type="int" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="kod_BTI" Type="nvarchar" MaxLength="1" />
-    <Property Name="flat_id" Type="nvarchar" MaxLength="1" />
-    <Property Name="comment" Type="ntext" />
-  </EntityType>
-  <EntityType Name="owners">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="surname" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="tel" Type="nvarchar" MaxLength="1" />
-    <Property Name="category_pay_id" Type="int" Nullable="false" />
-    <Property Name="objects_place_id" Type="int" />
-  </EntityType>
-  <EntityType Name="recorder_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="comment" Type="nvarchar" MaxLength="1" />
-  </EntityType>
-  <EntityType Name="resource_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="consumptoin_rate" Type="float" Nullable="false" />
-    <Property Name="units_id" Type="int" Nullable="false" />
-    <Property Name="units_cost" Type="money" />
-  </EntityType>
-  <EntityType Name="units">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="25" />
-  </EntityType>
-  <EntityType Name="users">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="login" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="surname" Type="nvarchar" Nullable="false" MaxLength="1" />
-    <Property Name="user_type_id" Type="int" Nullable="false" />
-    <Property Name="passwd" Type="nvarchar" Nullable="false" MaxLength="1" />
-  </EntityType>
-  <EntityType Name="users_type">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
-  </EntityType>
-  <Association Name="fk_net_id">
-    <End Role="net" Type="db_sqlceModel.Store.net" Multiplicity="0..1" />
-    <End Role="objects_place" Type="db_sqlceModel.Store.objects_place" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="net">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="objects_place">
-        <PropertyRef Name="net_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema>
-</edmx:StorageModels>
+<Schema Namespace="db_sqlceModel.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="category_pay_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="1" />
+          <Property Name="pay_rate" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="counters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date_start" Type="datetime" />
+          <Property Name="date_end" Type="datetime" />
+          <Property Name="chnannel" Type="int" />
+          <Property Name="objects_place_id" Type="int" />
+          <Property Name="owner_id" Type="int" />
+          <Property Name="date_act" Type="datetime" />
+          <Property Name="value_act" Type="float" />
+          <Property Name="net_id" Type="int" />
+          <Property Name="serial_amspi" Type="nvarchar" MaxLength="25" />
+          <Property Name="serial_r1" Type="nvarchar" MaxLength="25" />
+          <Property Name="serial_r2" Type="nvarchar" MaxLength="25" />
+          <Property Name="date_calibration_r1" Type="datetime" />
+          <Property Name="date_calibration_r2" Type="datetime" />
+          <Property Name="date_init_calibration_r2" Type="datetime" />
+          <Property Name="date_init_calibration_r1" Type="datetime" />
+          <Property Name="date_calibration_amspi" Type="datetime" />
+          <Property Name="diameter_r1" Type="int" />
+          <Property Name="diameter_r2" Type="int" />
+        </EntityType>
+        <EntityType Name="counters_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="resource_type_id" Type="int" Nullable="false" />
+          <Property Name="units_per_impulse" Type="float" />
+        </EntityType>
+        <EntityType Name="net">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="commnet" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="object_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="comment" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="objects_place">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="object_type_id" Type="int" />
+          <Property Name="objects_place_id" Type="int" />
+          <Property Name="net_id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="kod_BTI" Type="nvarchar" MaxLength="100" />
+          <Property Name="flat_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment" Type="ntext" />
+          <Property Name="owner_id" Type="int" />
+        </EntityType>
+        <EntityType Name="owners">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="category_pay_id" Type="int" />
+          <Property Name="objects_place_id" Type="int" />
+          <Property Name="patronymic" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="recorder_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="comment" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="resource_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="consumptoin_rate" Type="float" Nullable="false" />
+          <Property Name="units_id" Type="int" Nullable="false" />
+          <Property Name="units_cost" Type="money" />
+        </EntityType>
+        <EntityType Name="units">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="user_type_id" Type="int" Nullable="false" />
+          <Property Name="passwd" Type="nvarchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_net_id">
+          <End Role="net" Type="Self.net" Multiplicity="0..1" />
+          <End Role="objects_place" Type="Self.objects_place" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="net">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="objects_place">
+              <PropertyRef Name="net_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_sqlceModelStoreContainer">
+          <EntitySet Name="category_pay_type" EntityType="Self.category_pay_type" store:Type="Tables" />
+          <EntitySet Name="counters" EntityType="Self.counters" store:Type="Tables" />
+          <EntitySet Name="counters_type" EntityType="Self.counters_type" store:Type="Tables" />
+          <EntitySet Name="net" EntityType="Self.net" store:Type="Tables" />
+          <EntitySet Name="object_type" EntityType="Self.object_type" store:Type="Tables" />
+          <EntitySet Name="objects_place" EntityType="Self.objects_place" store:Type="Tables" />
+          <EntitySet Name="owners" EntityType="Self.owners" store:Type="Tables" />
+          <EntitySet Name="recorder_type" EntityType="Self.recorder_type" store:Type="Tables" />
+          <EntitySet Name="resource_type" EntityType="Self.resource_type" store:Type="Tables" />
+          <EntitySet Name="units" EntityType="Self.units" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" />
+          <EntitySet Name="users_type" EntityType="Self.users_type" store:Type="Tables" />
+          <AssociationSet Name="fk_net_id" Association="Self.fk_net_id">
+            <End Role="net" EntitySet="net" />
+            <End Role="objects_place" EntitySet="objects_place" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
 <!-- CSDL content -->
 <edmx:ConceptualModels>
 <Schema Namespace="db_sqlceModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -194,22 +195,22 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="date_start" Type="DateTime" />
-    <Property Name="date_end" Type="DateTime" />
+    <Property Name="date_start" Type="DateTime" Precision="3" />
+    <Property Name="date_end" Type="DateTime" Precision="3" />
     <Property Name="chnannel" Type="Int32" />
     <Property Name="objects_place_id" Type="Int32" />
     <Property Name="owner_id" Type="Int32" />
-    <Property Name="date_act" Type="DateTime" />
+    <Property Name="date_act" Type="DateTime" Precision="3" />
     <Property Name="value_act" Type="Double" />
     <Property Name="net_id" Type="Int32" />
     <Property Name="serial_amspi" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
     <Property Name="serial_r1" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
     <Property Name="serial_r2" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
-    <Property Name="date_calibration_r1" Type="DateTime" />
-    <Property Name="date_calibration_r2" Type="DateTime" />
-    <Property Name="date_init_calibration_r2" Type="DateTime" />
-    <Property Name="date_init_calibration_r1" Type="DateTime" />
-    <Property Name="date_calibration_amspi" Type="DateTime" />
+    <Property Name="date_calibration_r1" Type="DateTime" Precision="3" />
+    <Property Name="date_calibration_r2" Type="DateTime" Precision="3" />
+    <Property Name="date_init_calibration_r2" Type="DateTime" Precision="3" />
+    <Property Name="date_init_calibration_r1" Type="DateTime" Precision="3" />
+    <Property Name="date_calibration_amspi" Type="DateTime" Precision="3" />
     <Property Name="diameter_r1" Type="Int32" />
     <Property Name="diameter_r2" Type="Int32" />
   </EntityType>
@@ -236,8 +237,8 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="comment" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="comment" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="objects_place">
     <Key>
@@ -245,24 +246,26 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="object_type_id" Type="Int32" />
-    <Property Name="objects_place_id" Type="Int32" />
+    <Property Name="objects_place_id" Type="Int32" Nullable="true" />
     <Property Name="net_id" Type="Int32" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="kod_BTI" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="flat_id" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="kod_BTI" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="flat_id" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="net" Relationship="db_sqlceModel.fk_net_id" FromRole="objects_place" ToRole="net" />
+          <Property Name="owner_id" Type="Int32" Nullable="true" />
   </EntityType>
   <EntityType Name="owners">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="surname" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="tel" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
-    <Property Name="category_pay_id" Type="Int32" Nullable="false" />
-    <Property Name="objects_place_id" Type="Int32" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="surname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="category_pay_id" Type="Int32" Nullable="true" />
+    <Property Name="objects_place_id" Type="Int32" Nullable="true" />
+          <Property Name="patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
   </EntityType>
   <EntityType Name="recorder_type">
     <Key>
@@ -390,7 +393,8 @@
     <EntitySetMapping Name="objects_place">
       <EntityTypeMapping TypeName="db_sqlceModel.objects_place">
         <MappingFragment StoreEntitySet="objects_place">
-          <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="owner_id" ColumnName="owner_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="object_type_id" ColumnName="object_type_id" />
           <ScalarProperty Name="objects_place_id" ColumnName="objects_place_id" />
           <ScalarProperty Name="net_id" ColumnName="net_id" />
@@ -404,7 +408,8 @@
     <EntitySetMapping Name="owners">
       <EntityTypeMapping TypeName="db_sqlceModel.owners">
         <MappingFragment StoreEntitySet="owners">
-          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="surname" ColumnName="surname" />
           <ScalarProperty Name="tel" ColumnName="tel" />
@@ -470,15 +475,15 @@
 <Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
 <edmx:Options><DesignerInfoPropertySet><DesignerProperty Name="ValidateOnBuild" Value="True" /><DesignerProperty Name="EnablePluralization" Value="False" /><DesignerProperty Name="IncludeForeignKeysInModel" Value="True" /><DesignerProperty Name="UseLegacyProvider" Value="False" /><DesignerProperty Name="CodeGenerationStrategy" Value="None" /></DesignerInfoPropertySet></edmx:Options>
 <edmx:Diagrams >
-      <Diagram DiagramId="87acfe667d194ab5b6ef9d6774beb413" Name="Diagram1" ZoomLevel="83">
+      <Diagram DiagramId="87acfe667d194ab5b6ef9d6774beb413" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="db_sqlceModel.category_pay_type" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.counters" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.counters_type" Width="1.5" PointX="4.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.counters" Width="2.375" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.counters_type" Width="1.5" PointX="0.5" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.net" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.object_type" Width="1.5" PointX="5.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.objects_place" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.objects_place" Width="1.5" PointX="3.375" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.owners" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.recorder_type" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.recorder_type" Width="1.5" PointX="6.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.resource_type" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.units" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.users" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />

@@ -97,17 +97,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddObject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddObject.Designer.cs">
       <DependentUpon>AddObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOwner.Designer.cs">
+      <DependentUpon>AddOwner.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPlace.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddPlace.Designer.cs">
       <DependentUpon>AddPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResources.Designer.cs">
+      <DependentUpon>AddResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachObject.Designer.cs">
+      <DependentUpon>AttachObject.cs</DependentUpon>
     </Compile>
     <Compile Include="category_pay_type.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
@@ -139,6 +163,12 @@
     <Compile Include="EditObjects.Designer.cs">
       <DependentUpon>EditObjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditOwners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOwners.Designer.cs">
+      <DependentUpon>EditOwners.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditResources.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +186,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallRecorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallRecorder.Designer.cs">
+      <DependentUpon>InstallRecorder.cs</DependentUpon>
     </Compile>
     <Compile Include="net.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
@@ -186,14 +222,35 @@
     <Compile Include="users_type.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
     </Compile>
+    <Compile Include="WarningConditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarningConditions.Designer.cs">
+      <DependentUpon>WarningConditions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddObject.resx">
       <DependentUpon>AddObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOwner.resx">
+      <DependentUpon>AddOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPlace.resx">
       <DependentUpon>AddPlace.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddResources.resx">
+      <DependentUpon>AddResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttachObject.resx">
+      <DependentUpon>AttachObject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditObjects.resx">
       <DependentUpon>EditObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOwners.resx">
+      <DependentUpon>EditOwners.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditResources.resx">
       <DependentUpon>EditResources.cs</DependentUpon>
@@ -203,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallRecorder.resx">
+      <DependentUpon>InstallRecorder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,6 +274,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WarningConditions.resx">
+      <DependentUpon>WarningConditions.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -237,6 +300,7 @@
     <None Include="net.datasource" />
     <None Include="objects_place.datasource" />
     <None Include="object_type.datasource" />
+    <None Include="owners.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -279,6 +343,7 @@
     <Content Include="db_sqlce.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="ВПУ картинка.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -38,16 +38,22 @@ namespace VodopriborUchet
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.счетчикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ресурсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.единицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объектыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.владельцыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.добавитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вложитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.установитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.удалитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -68,14 +74,17 @@ namespace VodopriborUchet
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.добавитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.условияПредупрежденийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -86,7 +95,8 @@ namespace VodopriborUchet
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // файлToolStripMenuItem
@@ -110,17 +120,13 @@ namespace VodopriborUchet
             // справочникиToolStripMenuItem
             // 
             this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.счетчикиToolStripMenuItem,
             this.ресурсыToolStripMenuItem,
             this.единицыToolStripMenuItem,
-            this.объектыToolStripMenuItem});
+            this.объектыToolStripMenuItem,
+            this.владельцыToolStripMenuItem,
+            this.условияПредупрежденийToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             resources.ApplyResources(this.справочникиToolStripMenuItem, "справочникиToolStripMenuItem");
-            // 
-            // счетчикиToolStripMenuItem
-            // 
-            this.счетчикиToolStripMenuItem.Name = "счетчикиToolStripMenuItem";
-            resources.ApplyResources(this.счетчикиToolStripMenuItem, "счетчикиToolStripMenuItem");
             // 
             // ресурсыToolStripMenuItem
             // 
@@ -140,6 +146,12 @@ namespace VodopriborUchet
             resources.ApplyResources(this.объектыToolStripMenuItem, "объектыToolStripMenuItem");
             this.объектыToolStripMenuItem.Click += new System.EventHandler(this.объектыToolStripMenuItem_Click);
             // 
+            // владельцыToolStripMenuItem
+            // 
+            this.владельцыToolStripMenuItem.Name = "владельцыToolStripMenuItem";
+            resources.ApplyResources(this.владельцыToolStripMenuItem, "владельцыToolStripMenuItem");
+            this.владельцыToolStripMenuItem.Click += new System.EventHandler(this.владельцыToolStripMenuItem_Click);
+            // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -151,6 +163,7 @@ namespace VodopriborUchet
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             resources.ApplyResources(this.оПрограммеToolStripMenuItem, "оПрограммеToolStripMenuItem");
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -177,17 +190,57 @@ namespace VodopriborUchet
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.treeView1);
+            this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // treeView1
             // 
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.treeView1, "treeView1");
             this.treeView1.Name = "treeView1";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("treeView1.Nodes")))});
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьОбъектToolStripMenuItem,
+            this.вложитьОбъектToolStripMenuItem,
+            this.установитьToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.удалитьОбъектToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
+            // добавитьОбъектToolStripMenuItem
+            // 
+            this.добавитьОбъектToolStripMenuItem.Name = "добавитьОбъектToolStripMenuItem";
+            resources.ApplyResources(this.добавитьОбъектToolStripMenuItem, "добавитьОбъектToolStripMenuItem");
+            this.добавитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.добавитьОбъектToolStripMenuItem_Click);
+            // 
+            // вложитьОбъектToolStripMenuItem
+            // 
+            this.вложитьОбъектToolStripMenuItem.Name = "вложитьОбъектToolStripMenuItem";
+            resources.ApplyResources(this.вложитьОбъектToolStripMenuItem, "вложитьОбъектToolStripMenuItem");
+            this.вложитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.вложитьОбъектToolStripMenuItem_Click);
+            // 
+            // установитьToolStripMenuItem
+            // 
+            this.установитьToolStripMenuItem.Name = "установитьToolStripMenuItem";
+            resources.ApplyResources(this.установитьToolStripMenuItem, "установитьToolStripMenuItem");
+            this.установитьToolStripMenuItem.Click += new System.EventHandler(this.установитьToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // удалитьОбъектToolStripMenuItem
+            // 
+            this.удалитьОбъектToolStripMenuItem.Name = "удалитьОбъектToolStripMenuItem";
+            resources.ApplyResources(this.удалитьОбъектToolStripMenuItem, "удалитьОбъектToolStripMenuItem");
+            this.удалитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.удалитьОбъектToolStripMenuItem_Click);
             // 
             // splitContainer2
             // 
@@ -333,18 +386,34 @@ namespace VodopriborUchet
             resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
             this.dateTimePicker2.Name = "dateTimePicker2";
             // 
-            // contextMenuStrip1
+            // tableLayoutPanel2
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьОбъектToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.treeView1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 1);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
-            // добавитьОбъектToolStripMenuItem
+            // groupBox3
             // 
-            this.добавитьОбъектToolStripMenuItem.Name = "добавитьОбъектToolStripMenuItem";
-            resources.ApplyResources(this.добавитьОбъектToolStripMenuItem, "добавитьОбъектToolStripMenuItem");
-            this.добавитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.добавитьОбъектToolStripMenuItem_Click);
+            this.groupBox3.Controls.Add(this.listView2);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // listView2
+            // 
+            resources.ApplyResources(this.listView2, "listView2");
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listView2.Items")))});
+            this.listView2.Name = "listView2";
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
+            // 
+            // условияПредупрежденийToolStripMenuItem
+            // 
+            this.условияПредупрежденийToolStripMenuItem.Name = "условияПредупрежденийToolStripMenuItem";
+            resources.ApplyResources(this.условияПредупрежденийToolStripMenuItem, "условияПредупрежденийToolStripMenuItem");
+            this.условияПредупрежденийToolStripMenuItem.Click += new System.EventHandler(this.условияПредупрежденийToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -356,6 +425,7 @@ namespace VodopriborUchet
             this.Name = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
+            this.Shown += new System.EventHandler(this.Main_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -363,6 +433,7 @@ namespace VodopriborUchet
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -375,7 +446,8 @@ namespace VodopriborUchet
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +461,6 @@ namespace VodopriborUchet
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem счетчикиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ресурсыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem единицыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem объектыToolStripMenuItem;
@@ -421,6 +492,15 @@ namespace VodopriborUchet
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem добавитьОбъектToolStripMenuItem;
+        private ToolStripMenuItem вложитьОбъектToolStripMenuItem;
+        private ToolStripMenuItem установитьToolStripMenuItem;
+        private ToolStripMenuItem владельцыToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem удалитьОбъектToolStripMenuItem;
+        private TableLayoutPanel tableLayoutPanel2;
+        private GroupBox groupBox3;
+        private ListView listView2;
+        private ToolStripMenuItem условияПредупрежденийToolStripMenuItem;
 
     }
 }

@@ -18,7 +18,8 @@ namespace VodopriborUchet
         public string name { get; set; }
         public string surname { get; set; }
         public string tel { get; set; }
-        public int category_pay_id { get; set; }
+        public Nullable<int> category_pay_id { get; set; }
         public Nullable<int> objects_place_id { get; set; }
+        public string patronymic { get; set; }
     }
 }

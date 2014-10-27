@@ -59,5 +59,15 @@ namespace VodopriborUchet.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ВПУ_картинка {
+            get {
+                object obj = ResourceManager.GetObject("ВПУ картинка", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

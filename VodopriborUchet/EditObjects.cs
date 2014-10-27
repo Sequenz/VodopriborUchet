@@ -33,7 +33,7 @@ namespace VodopriborUchet
                 this.object_typeBindingSource.DataSource = results;
                 //this.objects_placeBindingSource.Columns[0].Visible = false;
                 // context.SaveChanges();
-
+                
 
             }
             catch (EntitySqlException ex)
@@ -47,6 +47,37 @@ namespace VodopriborUchet
         {
             var addObj = new AddObject(this);
             addObj.ShowDialog();     
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (object_typeDataGridView.SelectedCells.Count > 0)
+            {
+                int i =  (int) object_typeDataGridView.CurrentRow.Cells[0].Value;
+                 using (var context = new db_sqlceEntities())
+            {
+                try
+                {
+                    var obPlc = context.object_type.FirstOrDefault(p => p.id == i);
+                    if (obPlc != null)
+                    {
+                        context.object_type.Remove(obPlc);
+                        context.SaveChanges();
+                        LoadData();
+                        //loadTree();
+                    }
+
+
+                }
+                catch (EntitySqlException ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+
+            }
         }
     }
 }

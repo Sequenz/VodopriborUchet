@@ -12,9 +12,11 @@ namespace VodopriborUchet
 {
     public partial class AddPlace : Form
     {
-        public AddPlace()
+        private Main _main;
+        public AddPlace(Main @from)
         {
             InitializeComponent();
+            this._main = @from;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +35,7 @@ namespace VodopriborUchet
                 };
                 context.objects_place.Add(place);
                 context.SaveChanges();
+                _main.loadTree();
                 this.Close();
             } 
 
@@ -69,11 +72,6 @@ namespace VodopriborUchet
                 this.comboBox2.DataSource = results1;
                 this.comboBox2.DisplayMember = "name";
                 this.comboBox2.ValueMember = "id";
-                //this.objects_placeBindingSource.Columns[0].Visible = false;
-                // context.SaveChanges();
-
-
-
 
             }
             catch (EntitySqlException ex)
@@ -81,6 +79,29 @@ namespace VodopriborUchet
 
                 MessageBox.Show(ex.Message);
             }
+
+            try
+            {
+                var query1 = from c in context.owners
+                             select new
+                             {
+                                 c.id,fio = c.surname +" "+ c.name + " "+ c.patronymic//new {c_name = c.name, c_ucost = c.net, a_name = c.kod_BTI};
+                             };
+                var results1 = query1.ToList();
+                this.comboBox3.DataSource = results1;
+                this.comboBox3.DisplayMember = "fio";
+                this.comboBox3.ValueMember = "id";
+            }
+            catch (EntitySqlException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBox3_TextChanged(object sender, EventArgs e)
+        {
+            this.comboBox3.Width = this.comboBox3.Items[comboBox3.SelectedIndex].ToString().Length*5;
         }
 
     }
