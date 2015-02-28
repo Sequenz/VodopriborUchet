@@ -34,19 +34,29 @@ namespace VodopriborUchet
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.подключенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ресурсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.единицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объектыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.владельцыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.условияПредупрежденийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +64,8 @@ namespace VodopriborUchet
             this.установитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.удалитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -63,28 +75,35 @@ namespace VodopriborUchet
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r1_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r2_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingPackageSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.da = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingWarningSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.условияПредупрежденийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.packageizBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -94,9 +113,14 @@ namespace VodopriborUchet
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPackageSource)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingWarningSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.packageizBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // файлToolStripMenuItem
@@ -114,8 +138,16 @@ namespace VodopriborUchet
             // 
             // настройкиToolStripMenuItem
             // 
+            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.подключенияToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             resources.ApplyResources(this.настройкиToolStripMenuItem, "настройкиToolStripMenuItem");
+            // 
+            // подключенияToolStripMenuItem
+            // 
+            this.подключенияToolStripMenuItem.Name = "подключенияToolStripMenuItem";
+            resources.ApplyResources(this.подключенияToolStripMenuItem, "подключенияToolStripMenuItem");
+            this.подключенияToolStripMenuItem.Click += new System.EventHandler(this.подключенияToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 
@@ -151,6 +183,12 @@ namespace VodopriborUchet
             this.владельцыToolStripMenuItem.Name = "владельцыToolStripMenuItem";
             resources.ApplyResources(this.владельцыToolStripMenuItem, "владельцыToolStripMenuItem");
             this.владельцыToolStripMenuItem.Click += new System.EventHandler(this.владельцыToolStripMenuItem_Click);
+            // 
+            // условияПредупрежденийToolStripMenuItem
+            // 
+            this.условияПредупрежденийToolStripMenuItem.Name = "условияПредупрежденийToolStripMenuItem";
+            resources.ApplyResources(this.условияПредупрежденийToolStripMenuItem, "условияПредупрежденийToolStripMenuItem");
+            this.условияПредупрежденийToolStripMenuItem.Click += new System.EventHandler(this.условияПредупрежденийToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -195,12 +233,18 @@ namespace VodopriborUchet
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.treeView1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 1);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
             // treeView1
             // 
             this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.treeView1, "treeView1");
             this.treeView1.Name = "treeView1";
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // contextMenuStrip1
             // 
@@ -241,6 +285,19 @@ namespace VodopriborUchet
             this.удалитьОбъектToolStripMenuItem.Name = "удалитьОбъектToolStripMenuItem";
             resources.ApplyResources(this.удалитьОбъектToolStripMenuItem, "удалитьОбъектToolStripMenuItem");
             this.удалитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.удалитьОбъектToolStripMenuItem_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listBox1);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // listBox1
+            // 
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Name = "listBox1";
             // 
             // splitContainer2
             // 
@@ -300,60 +357,153 @@ namespace VodopriborUchet
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column4,
-            this.Column5,
-            this.Column2,
-            this.Column3});
+            this.date,
+            this.r1,
+            this.r2,
+            this.r1_c,
+            this.r2_c});
+            this.dataGridView1.DataSource = this.bindingPackageSource;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             // 
-            // Column1
+            // date
             // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
+            this.date.DataPropertyName = "date";
+            this.date.FillWeight = 150F;
+            resources.ApplyResources(this.date, "date");
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
             // 
-            // Column4
+            // r1
             // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
+            this.r1.DataPropertyName = "r1";
+            resources.ApplyResources(this.r1, "r1");
+            this.r1.Name = "r1";
+            this.r1.ReadOnly = true;
             // 
-            // Column5
+            // r2
             // 
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
+            this.r2.DataPropertyName = "r2";
+            resources.ApplyResources(this.r2, "r2");
+            this.r2.Name = "r2";
+            this.r2.ReadOnly = true;
             // 
-            // Column2
+            // r1_c
             // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
+            this.r1_c.DataPropertyName = "r1_c";
+            dataGridViewCellStyle1.Format = "N3";
+            dataGridViewCellStyle1.NullValue = null;
+            this.r1_c.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.r1_c, "r1_c");
+            this.r1_c.Name = "r1_c";
+            this.r1_c.ReadOnly = true;
             // 
-            // Column3
+            // r2_c
             // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
+            this.r2_c.DataPropertyName = "r2_c";
+            dataGridViewCellStyle2.Format = "N3";
+            dataGridViewCellStyle2.NullValue = null;
+            this.r2_c.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.r2_c, "r2_c");
+            this.r2_c.Name = "r2_c";
+            this.r2_c.ReadOnly = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.da,
+            this.sn,
+            this.wr});
+            this.dataGridView2.DataSource = this.bindingWarningSource;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            // 
+            // da
+            // 
+            this.da.DataPropertyName = "da";
+            dataGridViewCellStyle3.Format = "F";
+            dataGridViewCellStyle3.NullValue = null;
+            this.da.DefaultCellStyle = dataGridViewCellStyle3;
+            this.da.FillWeight = 200F;
+            resources.ApplyResources(this.da, "da");
+            this.da.Name = "da";
+            this.da.ReadOnly = true;
+            // 
+            // sn
+            // 
+            this.sn.DataPropertyName = "sn";
+            resources.ApplyResources(this.sn, "sn");
+            this.sn.Name = "sn";
+            this.sn.ReadOnly = true;
+            // 
+            // wr
+            // 
+            this.wr.DataPropertyName = "wr";
+            this.wr.FillWeight = 350F;
+            resources.ApplyResources(this.wr, "wr");
+            this.wr.Name = "wr";
+            this.wr.ReadOnly = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.chart1);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            resources.ApplyResources(this.chart1, "chart1");
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Red;
+            series1.Legend = "Legend1";
+            series1.Name = "Счетчик №1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Blue;
+            series2.Legend = "Legend1";
+            series2.Name = "Счетчик №2";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             // 
             // flowLayoutPanel1
             // 
@@ -374,6 +524,7 @@ namespace VodopriborUchet
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 
@@ -385,35 +536,11 @@ namespace VodopriborUchet
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
             this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
-            // tableLayoutPanel2
+            // packageizBindingSource
             // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.treeView1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 1);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.listView2);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // listView2
-            // 
-            resources.ApplyResources(this.listView2, "listView2");
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listView2.Items")))});
-            this.listView2.Name = "listView2";
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
-            // 
-            // условияПредупрежденийToolStripMenuItem
-            // 
-            this.условияПредупрежденийToolStripMenuItem.Name = "условияПредупрежденийToolStripMenuItem";
-            resources.ApplyResources(this.условияПредупрежденийToolStripMenuItem, "условияПредупрежденийToolStripMenuItem");
-            this.условияПредупрежденийToolStripMenuItem.Click += new System.EventHandler(this.условияПредупрежденийToolStripMenuItem_Click);
+            this.packageizBindingSource.DataSource = typeof(VodopriborUchet.package_iz);
             // 
             // Main
             // 
@@ -425,7 +552,6 @@ namespace VodopriborUchet
             this.Name = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
-            this.Shown += new System.EventHandler(this.Main_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -433,7 +559,9 @@ namespace VodopriborUchet
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -444,10 +572,15 @@ namespace VodopriborUchet
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPackageSource)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingWarningSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.packageizBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,12 +611,6 @@ namespace VodopriborUchet
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
@@ -499,8 +626,24 @@ namespace VodopriborUchet
         private ToolStripMenuItem удалитьОбъектToolStripMenuItem;
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox groupBox3;
-        private ListView listView2;
         private ToolStripMenuItem условияПредупрежденийToolStripMenuItem;
+        private DataGridView dataGridView1;
+        private BindingSource bindingPackageSource;
+        private DataGridView dataGridView2;
+        private BindingSource bindingWarningSource;
+        private ToolStripMenuItem подключенияToolStripMenuItem;
+        private ListBox listBox1;
+        private TabPage tabPage3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private BindingSource packageizBindingSource;
+        private DataGridViewTextBoxColumn da;
+        private DataGridViewTextBoxColumn sn;
+        private DataGridViewTextBoxColumn wr;
+        private DataGridViewTextBoxColumn date;
+        private DataGridViewTextBoxColumn r1;
+        private DataGridViewTextBoxColumn r2;
+        private DataGridViewTextBoxColumn r1_c;
+        private DataGridViewTextBoxColumn r2_c;
 
     }
 }

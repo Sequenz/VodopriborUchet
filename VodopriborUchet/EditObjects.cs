@@ -53,30 +53,39 @@ namespace VodopriborUchet
         {
             if (object_typeDataGridView.SelectedCells.Count > 0)
             {
-                int i =  (int) object_typeDataGridView.CurrentRow.Cells[0].Value;
-                 using (var context = new db_sqlceEntities())
-            {
-                try
+                DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить выбранный пункт?",
+                    "Подтвердите удаление!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    var obPlc = context.object_type.FirstOrDefault(p => p.id == i);
-                    if (obPlc != null)
+                    int i = (int) object_typeDataGridView.CurrentRow.Cells[0].Value;
+                    using (var context = new db_sqlceEntities())
                     {
-                        context.object_type.Remove(obPlc);
-                        context.SaveChanges();
-                        LoadData();
-                        //loadTree();
+                        try
+                        {
+                            var obPlc = context.object_type.FirstOrDefault(p => p.id == i);
+                            if (obPlc != null)
+                            {
+                                context.object_type.Remove(obPlc);
+                                context.SaveChanges();
+                                LoadData();
+                                //loadTree();
+                            }
+
+
+                        }
+                        catch (EntitySqlException ex)
+                        {
+
+                            MessageBox.Show(ex.Message);
+                        }
+
                     }
 
-
                 }
-                catch (EntitySqlException ex)
+                else if (dialogResult == DialogResult.No)
                 {
-
-                    MessageBox.Show(ex.Message);
+                    return;
                 }
-                
-            }
-
             }
         }
     }

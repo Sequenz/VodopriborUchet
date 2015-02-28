@@ -79,27 +79,27 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 13);
+            this.label3.Size = new System.Drawing.Size(202, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Дата первичной калибровки счетчика №1";
+            this.label3.Text = "Дата первичной поверки счетчика №1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 194);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 13);
+            this.label4.Size = new System.Drawing.Size(202, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Дата первичной калибровки счетчика №2";
+            this.label4.Text = "Дата первичной поверки счетчика №2";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 241);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 13);
+            this.label5.Size = new System.Drawing.Size(146, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Дата калибровки счетчика №1";
+            this.label5.Text = "Дата поверки счетчика №1";
             // 
             // textBox1
             // 
@@ -121,18 +121,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 285);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 13);
+            this.label6.Size = new System.Drawing.Size(146, 13);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Дата калибровки счетчика №2";
+            this.label6.Text = "Дата поверки счетчика №2";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 321);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 13);
+            this.label7.Size = new System.Drawing.Size(122, 13);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Дата калибровки ППУ-РВ";
+            this.label7.Text = "Дата поверки ППУ-РВ";
             // 
             // dateTimePicker1
             // 
@@ -226,18 +226,18 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(13, 350);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 13);
+            this.label10.Size = new System.Drawing.Size(223, 13);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Диметр счетчика №1";
+            this.label10.Text = "Диаметр условного прохода счётчика № 1";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 378);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 13);
+            this.label11.Size = new System.Drawing.Size(223, 13);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Диаметр счетчика №2";
+            this.label11.Text = "Диаметр условного прохода счётчика № 2";
             // 
             // textBox5
             // 
@@ -258,9 +258,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(15, 111);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 13);
+            this.label12.Size = new System.Drawing.Size(134, 13);
             this.label12.TabIndex = 24;
-            this.label12.Text = "Дата начала автом. учета";
+            this.label12.Text = "Дата установки ППУ-РМ";
             // 
             // dateTimePicker6
             // 
@@ -301,7 +301,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "InstallRecorder";
-            this.Text = " ";
+            this.Text = "Установить ППУ-РВ";
             this.Load += new System.EventHandler(this.InstallRecorder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

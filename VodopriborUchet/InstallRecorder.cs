@@ -32,6 +32,10 @@ namespace VodopriborUchet
                 using (var context = new db_sqlceEntities())
                 {
 
+                    var q = context.counters.FirstOrDefault(c => c.serial_amspi == textBox2.Text);
+                    if (q == null)
+                    {
+                     
                     var cnt = new counters()
                     {
                        objects_place_id = _treeNodeId,
@@ -48,6 +52,12 @@ namespace VodopriborUchet
                     context.counters.Add(cnt);
                     context.SaveChanges();
                     this.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ППУ-РМ с таким серийным номером уже установлен!");
+                    }
                 }
 
             }

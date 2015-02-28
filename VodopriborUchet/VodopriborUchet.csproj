@@ -63,6 +63,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.1\lib\net40\EntityFramework.SqlServerCompact.dll</HintPath>
     </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1076\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -86,6 +89,7 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -102,6 +106,12 @@
     </Compile>
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddImpulse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddImpulse.Designer.cs">
+      <DependentUpon>AddImpulse.cs</DependentUpon>
     </Compile>
     <Compile Include="AddObject.cs">
       <SubType>Form</SubType>
@@ -157,11 +167,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_sqlce.edmx</DependentUpon>
     </Compile>
+    <Compile Include="EditImpulse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditImpulse.Designer.cs">
+      <DependentUpon>EditImpulse.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditObjects.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditObjects.Designer.cs">
       <DependentUpon>EditObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editOptions.Designer.cs">
+      <DependentUpon>editOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="EditOwners.cs">
       <SubType>Form</SubType>
@@ -187,12 +209,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="impulse.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
     <Compile Include="InstallRecorder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InstallRecorder.Designer.cs">
       <DependentUpon>InstallRecorder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Log.cs" />
+    <Compile Include="MailService.cs" />
+    <Compile Include="MyHttpServer.cs" />
     <Compile Include="net.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
     </Compile>
@@ -202,7 +230,25 @@
     <Compile Include="object_type.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
     </Compile>
+    <Compile Include="options.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
     <Compile Include="owners.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="package_al.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="package_iz.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="package_on.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="package_tm.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="package_ts.cs">
       <DependentUpon>db_sqlce.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -228,8 +274,14 @@
     <Compile Include="WarningConditions.Designer.cs">
       <DependentUpon>WarningConditions.cs</DependentUpon>
     </Compile>
+    <Compile Include="warning_conditions.cs">
+      <DependentUpon>db_sqlce.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddImpulse.resx">
+      <DependentUpon>AddImpulse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddObject.resx">
       <DependentUpon>AddObject.cs</DependentUpon>
@@ -246,8 +298,14 @@
     <EmbeddedResource Include="AttachObject.resx">
       <DependentUpon>AttachObject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditImpulse.resx">
+      <DependentUpon>EditImpulse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditObjects.resx">
       <DependentUpon>EditObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editOptions.resx">
+      <DependentUpon>editOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditOwners.resx">
       <DependentUpon>EditOwners.cs</DependentUpon>
@@ -297,11 +355,13 @@
     <None Include="db_sqlceedmx.diagram">
       <DependentUpon>db_sqlce.edmx</DependentUpon>
     </None>
+    <None Include="impulse.datasource" />
     <None Include="net.datasource" />
     <None Include="objects_place.datasource" />
     <None Include="object_type.datasource" />
     <None Include="owners.datasource" />
     <None Include="packages.config" />
+    <None Include="package_iz.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -340,9 +400,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db_sqlce.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="ВПУ картинка.jpg" />
   </ItemGroup>
   <ItemGroup>

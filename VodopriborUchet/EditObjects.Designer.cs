@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditObjects));
             this.object_typeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.object_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -41,16 +42,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.object_typeDataGridView = new System.Windows.Forms.DataGridView();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.object_typeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.object_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.object_typeBindingNavigator)).BeginInit();
             this.object_typeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_typeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.object_typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.object_typeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // object_typeBindingNavigator
@@ -81,6 +81,10 @@
             this.object_typeBindingNavigator.Size = new System.Drawing.Size(344, 25);
             this.object_typeBindingNavigator.TabIndex = 0;
             this.object_typeBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // object_typeBindingSource
+            // 
+            this.object_typeBindingSource.DataSource = typeof(VodopriborUchet.object_type);
             // 
             // bindingNavigatorCountItem
             // 
@@ -151,16 +155,28 @@
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButton1.Text = "Добавить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton2.Text = "Удалить";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // object_typeDataGridView
             // 
+            this.object_typeDataGridView.AllowUserToAddRows = false;
+            this.object_typeDataGridView.AllowUserToDeleteRows = false;
             this.object_typeDataGridView.AutoGenerateColumns = false;
             this.object_typeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.object_typeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -171,24 +187,16 @@
             this.object_typeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.object_typeDataGridView.Location = new System.Drawing.Point(0, 25);
             this.object_typeDataGridView.Name = "object_typeDataGridView";
+            this.object_typeDataGridView.ReadOnly = true;
             this.object_typeDataGridView.Size = new System.Drawing.Size(344, 237);
             this.object_typeDataGridView.TabIndex = 1;
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
@@ -196,16 +204,14 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
             this.dataGridViewTextBoxColumn2.HeaderText = "Наименование";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "comment";
             this.dataGridViewTextBoxColumn3.HeaderText = "Коментарий";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // object_typeBindingSource
-            // 
-            this.object_typeBindingSource.DataSource = typeof(VodopriborUchet.object_type);
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // EditObjects
             // 
@@ -222,8 +228,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.object_typeBindingNavigator)).EndInit();
             this.object_typeBindingNavigator.ResumeLayout(false);
             this.object_typeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_typeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.object_typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.object_typeDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

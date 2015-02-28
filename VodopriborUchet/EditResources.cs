@@ -36,30 +36,39 @@ namespace VodopriborUchet
         {
             if (resource_typeDataGridView.SelectedCells.Count > 0)
             {
-                int i = (int)resource_typeDataGridView.CurrentRow.Cells[0].Value;
-                using (var context = new db_sqlceEntities())
+                DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить выбранный пункт?",
+                    "Подтвердите удаление!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    try
+                    int i = (int) resource_typeDataGridView.CurrentRow.Cells[0].Value;
+                    using (var context = new db_sqlceEntities())
                     {
-                        var obPlc = context.resource_type.FirstOrDefault(p => p.id == i);
-                        if (obPlc != null)
+                        try
                         {
-                            context.resource_type.Remove(obPlc);
-                            context.SaveChanges();
-                            LoadData();
-                            //loadTree();
+                            var obPlc = context.resource_type.FirstOrDefault(p => p.id == i);
+                            if (obPlc != null)
+                            {
+                                context.resource_type.Remove(obPlc);
+                                context.SaveChanges();
+                                LoadData();
+                                //loadTree();
+                            }
+
+
+                        }
+                        catch (EntitySqlException ex)
+                        {
+
+                            MessageBox.Show(ex.Message);
                         }
 
-
-                    }
-                    catch (EntitySqlException ex)
-                    {
-
-                        MessageBox.Show(ex.Message);
                     }
 
                 }
-
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
             }
         }
 

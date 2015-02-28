@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="выходToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>108, 22</value>
   </data>
   <data name="выходToolStripMenuItem.Text" xml:space="preserve">
     <value>Выход</value>
@@ -129,6 +129,12 @@
   </data>
   <data name="файлToolStripMenuItem.Text" xml:space="preserve">
     <value>Файл</value>
+  </data>
+  <data name="подключенияToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="подключенияToolStripMenuItem.Text" xml:space="preserve">
+    <value>Подключения</value>
   </data>
   <data name="настройкиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -140,7 +146,7 @@
     <value>217, 22</value>
   </data>
   <data name="ресурсыToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ресурсы</value>
+    <value>Вес импульсов</value>
   </data>
   <data name="единицыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 22</value>
@@ -173,7 +179,7 @@
     <value>Справочники</value>
   </data>
   <data name="оПрограммеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="оПрограммеToolStripMenuItem.Text" xml:space="preserve">
     <value>О программе</value>
@@ -285,46 +291,28 @@
   <data name="&gt;&gt;treeView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="listView2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="listBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="listView2.Items" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkMAwAAAFFTeXN0
-        ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2Vu
-        PWIwM2Y1ZjdmMTFkNTBhM2EFAQAAACFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0HAAAA
-        BFRleHQKSW1hZ2VJbmRleAlCYWNrQ29sb3IHQ2hlY2tlZARGb250CUZvcmVDb2xvchdVc2VJdGVtU3R5
-        bGVGb3JTdWJJdGVtcwEABAAEBAAIFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAETU3lzdGVtLkRyYXdp
-        bmcuRm9udAMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAAQIAAAAGBAAAADjQndC10LTQvtGB0YLQ
-        sNGC0L7Rh9C90YvQuSDRg9GA0L7QstC10L3RjCDRgdC40LPQvdCw0LvQsP////8F+////xRTeXN0ZW0u
-        RHJhd2luZy5Db2xvcgQAAAAEbmFtZQV2YWx1ZQprbm93bkNvbG9yBXN0YXRlAQAAAAkHBwMAAAAKAAAA
-        AAAAAAAYAAEAAAkGAAAAAfn////7////CgAAAAAAAAAAGgABAAEFBgAAABNTeXN0ZW0uRHJhd2luZy5G
-        b250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQMA
-        AAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCAAAABRNaWNyb3NvZnQgU2FucyBT
-        ZXJpZgAABEEF9////xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAMAAAAAAAAA
-        Bfb///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAAAwAAAAs=
-</value>
-  </data>
-  <data name="listView2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
-  <data name="listView2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 74</value>
   </data>
-  <data name="listView2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;listView2.Name" xml:space="preserve">
-    <value>listView2</value>
+  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
+    <value>listBox1</value>
   </data>
-  <data name="&gt;&gt;listView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listView2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
     <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;listView2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -456,11 +444,11 @@
         AAAAAfj////6////CgAAAAAAAAAAGgABAAEFBQAAADFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmll
         d0l0ZW0rTGlzdFZpZXdTdWJJdGVtBAAAAAR0ZXh0BG5hbWUFc3R5bGUIdXNlckRhdGEBAQQCPlN5c3Rl
         bS5XaW5kb3dzLkZvcm1zLkxpc3RWaWV3SXRlbStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAA
-        AAIAAAAGCQAAAAzQntCQ0J4gIjEyMyIKCgoFBwAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1l
-        BFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQMAAAAbU3lzdGVtLkRy
-        YXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCgAAABRNaWNyb3NvZnQgU2FucyBTZXJpZgAABEEF9f//
-        /xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAMAAAAAAAAABfT///8bU3lzdGVt
-        LkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAAAwAAAAs=
+        AAIAAAAKCgoKBQcAAAATU3lzdGVtLkRyYXdpbmcuRm9udAQAAAAETmFtZQRTaXplBVN0eWxlBFVuaXQB
+        AAQECxhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUDAAAAG1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5p
+        dAMAAAADAAAABgkAAAAUTWljcm9zb2Z0IFNhbnMgU2VyaWYAAARBBfb///8YU3lzdGVtLkRyYXdpbmcu
+        Rm9udFN0eWxlAQAAAAd2YWx1ZV9fAAgDAAAAAAAAAAX1////G1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNz
+        VW5pdAEAAAAHdmFsdWVfXwAIAwAAAAMAAAAL
 </value>
   </data>
   <data name="listView1.Items1" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -478,11 +466,11 @@
         AAH4////+v///woAAAAAAAAAABoAAQABBQUAAAAxU3lzdGVtLldpbmRvd3MuRm9ybXMuTGlzdFZpZXdJ
         dGVtK0xpc3RWaWV3U3ViSXRlbQQAAAAEdGV4dARuYW1lBXN0eWxlCHVzZXJEYXRhAQEEAj5TeXN0ZW0u
         V2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0rTGlzdFZpZXdTdWJJdGVtK1N1Ykl0ZW1TdHlsZQIAAAAC
-        AAAABgkAAAALNDQ0LTIyMi0zMzMKCgoFBwAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNp
-        emUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQMAAAAbU3lzdGVtLkRyYXdp
-        bmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCgAAABRNaWNyb3NvZnQgU2FucyBTZXJpZgAABEEF9f///xhT
-        eXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAMAAAAAAAAABfT///8bU3lzdGVtLkRy
-        YXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAAAwAAAAs=
+        AAAABgkAAAAACgoKBQcAAAATU3lzdGVtLkRyYXdpbmcuRm9udAQAAAAETmFtZQRTaXplBVN0eWxlBFVu
+        aXQBAAQECxhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUDAAAAG1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNz
+        VW5pdAMAAAADAAAABgoAAAAUTWljcm9zb2Z0IFNhbnMgU2VyaWYAAARBBfX///8YU3lzdGVtLkRyYXdp
+        bmcuRm9udFN0eWxlAQAAAAd2YWx1ZV9fAAgDAAAAAAAAAAX0////G1N5c3RlbS5EcmF3aW5nLkdyYXBo
+        aWNzVW5pdAEAAAAHdmFsdWVfXwAIAwAAAAMAAAAL
 </value>
   </data>
   <data name="listView1.Items2" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -500,12 +488,11 @@
         ///6////CgAAAAAAAAAAGgABAAEFBQAAADFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0r
         TGlzdFZpZXdTdWJJdGVtBAAAAAR0ZXh0BG5hbWUFc3R5bGUIdXNlckRhdGEBAQQCPlN5c3RlbS5XaW5k
         b3dzLkZvcm1zLkxpc3RWaWV3SXRlbStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAAAAIAAAAG
-        CQAAACTRg9C70LjRhtCwINCc0L7RgdC60L7QstGB0LrQsNGPIOKEljEKCgoFBwAAABNTeXN0ZW0uRHJh
-        d2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRT
-        dHlsZQMAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCgAAABRNaWNyb3NvZnQg
-        U2FucyBTZXJpZgAABEEF9f///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAMA
-        AAAAAAAABfT///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAAAwAA
-        AAs=
+        CQAAAAAKCgoFBwAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEA
+        BAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQMAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0
+        AwAAAAMAAAAGCgAAABRNaWNyb3NvZnQgU2FucyBTZXJpZgAABEEF9f///xhTeXN0ZW0uRHJhd2luZy5G
+        b250U3R5bGUBAAAAB3ZhbHVlX18ACAMAAAAAAAAABfT///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NV
+        bml0AQAAAAd2YWx1ZV9fAAgDAAAAAwAAAAs=
 </value>
   </data>
   <data name="listView1.Items3" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -523,11 +510,11 @@
         CgAAAAAAAAAAGAABAAAJBwAAAAH4////+v///woAAAAAAAAAABoAAQABBQUAAAAxU3lzdGVtLldpbmRv
         d3MuRm9ybXMuTGlzdFZpZXdJdGVtK0xpc3RWaWV3U3ViSXRlbQQAAAAEdGV4dARuYW1lBXN0eWxlCHVz
         ZXJEYXRhAQEEAj5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0rTGlzdFZpZXdTdWJJdGVt
-        K1N1Ykl0ZW1TdHlsZQIAAAACAAAABgkAAAAKNTU1NDQ0NzcxMQoKCgUHAAAAE1N5c3RlbS5EcmF3aW5n
-        LkZvbnQEAAAABE5hbWUEU2l6ZQVTdHlsZQRVbml0AQAEBAsYU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxl
-        AwAAABtTeXN0ZW0uRHJhd2luZy5HcmFwaGljc1VuaXQDAAAAAwAAAAYKAAAAFE1pY3Jvc29mdCBTYW5z
-        IFNlcmlmAAAEQQX1////GFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQEAAAAHdmFsdWVfXwAIAwAAAAAA
-        AAAF9P///xtTeXN0ZW0uRHJhd2luZy5HcmFwaGljc1VuaXQBAAAAB3ZhbHVlX18ACAMAAAADAAAACw==
+        K1N1Ykl0ZW1TdHlsZQIAAAACAAAABgkAAAAACgoKBQcAAAATU3lzdGVtLkRyYXdpbmcuRm9udAQAAAAE
+        TmFtZQRTaXplBVN0eWxlBFVuaXQBAAQECxhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUDAAAAG1N5c3Rl
+        bS5EcmF3aW5nLkdyYXBoaWNzVW5pdAMAAAADAAAABgoAAAAUTWljcm9zb2Z0IFNhbnMgU2VyaWYAAARB
+        BfX///8YU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlAQAAAAd2YWx1ZV9fAAgDAAAAAAAAAAX0////G1N5
+        c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAEAAAAHdmFsdWVfXwAIAwAAAAMAAAAL
 </value>
   </data>
   <data name="listView1.Items4" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -545,12 +532,12 @@
         BXN0YXRlAQAAAAkHBwMAAAAKAAAAAAAAAAAYAAEAAAkHAAAAAfj////6////CgAAAAAAAAAAGgABAAEF
         BQAAADFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0rTGlzdFZpZXdTdWJJdGVtBAAAAAR0
         ZXh0BG5hbWUFc3R5bGUIdXNlckRhdGEBAQQCPlN5c3RlbS5XaW5kb3dzLkZvcm1zLkxpc3RWaWV3SXRl
-        bStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAAAAIAAAAGCQAAAAcxMjMxMjExCgoKBQcAAAAT
-        U3lzdGVtLkRyYXdpbmcuRm9udAQAAAAETmFtZQRTaXplBVN0eWxlBFVuaXQBAAQECxhTeXN0ZW0uRHJh
-        d2luZy5Gb250U3R5bGUDAAAAG1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAMAAAADAAAABgoAAAAU
-        TWljcm9zb2Z0IFNhbnMgU2VyaWYAAARBBfX///8YU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlAQAAAAd2
-        YWx1ZV9fAAgDAAAAAAAAAAX0////G1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAEAAAAHdmFsdWVf
-        XwAIAwAAAAMAAAAL
+        bStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAAAAIAAAAGCQAAAAAKCgoFBwAAABNTeXN0ZW0u
+        RHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZv
+        bnRTdHlsZQMAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCgAAABRNaWNyb3Nv
+        ZnQgU2FucyBTZXJpZgAABEEF9f///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18A
+        CAMAAAAAAAAABfT///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAA
+        AwAAAAs=
 </value>
   </data>
   <data name="listView1.Items5" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -568,12 +555,12 @@
         BXN0YXRlAQAAAAkHBwMAAAAKAAAAAAAAAAAYAAEAAAkHAAAAAfj////6////CgAAAAAAAAAAGgABAAEF
         BQAAADFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0rTGlzdFZpZXdTdWJJdGVtBAAAAAR0
         ZXh0BG5hbWUFc3R5bGUIdXNlckRhdGEBAQQCPlN5c3RlbS5XaW5kb3dzLkZvcm1zLkxpc3RWaWV3SXRl
-        bStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAAAAIAAAAGCQAAAAczMjExMjExCgoKBQcAAAAT
-        U3lzdGVtLkRyYXdpbmcuRm9udAQAAAAETmFtZQRTaXplBVN0eWxlBFVuaXQBAAQECxhTeXN0ZW0uRHJh
-        d2luZy5Gb250U3R5bGUDAAAAG1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAMAAAADAAAABgoAAAAU
-        TWljcm9zb2Z0IFNhbnMgU2VyaWYAAARBBfX///8YU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlAQAAAAd2
-        YWx1ZV9fAAgDAAAAAAAAAAX0////G1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAEAAAAHdmFsdWVf
-        XwAIAwAAAAMAAAAL
+        bStMaXN0Vmlld1N1Ykl0ZW0rU3ViSXRlbVN0eWxlAgAAAAIAAAAGCQAAAAAKCgoFBwAAABNTeXN0ZW0u
+        RHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZv
+        bnRTdHlsZQMAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCgAAABRNaWNyb3Nv
+        ZnQgU2FucyBTZXJpZgAABEEF9f///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18A
+        CAMAAAAAAAAABfT///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgDAAAA
+        AwAAAAs=
 </value>
   </data>
   <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
@@ -648,36 +635,45 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <metadata name="date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>Дата</value>
+  <data name="date.HeaderText" xml:space="preserve">
+    <value>Время и дата прихода телеметрической информации</value>
   </data>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="date.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <metadata name="r1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column4.HeaderText" xml:space="preserve">
-    <value>Показания (ГВС)</value>
+  <data name="r1.HeaderText" xml:space="preserve">
+    <value>Текущие показания счётчика №1</value>
   </data>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="r2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column5.HeaderText" xml:space="preserve">
-    <value>Потребление (ГВС)</value>
+  <data name="r2.HeaderText" xml:space="preserve">
+    <value>Текущие показания счётчика №2</value>
   </data>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="r1_c.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column2.HeaderText" xml:space="preserve">
-    <value>Показания (ХВС)</value>
+  <data name="r1_c.HeaderText" xml:space="preserve">
+    <value>Расход Счетчика №1</value>
   </data>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="r2_c.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column3.HeaderText" xml:space="preserve">
-    <value>Потребление (ХВС)</value>
+  <data name="r2_c.HeaderText" xml:space="preserve">
+    <value>Расход Счетчика №2</value>
   </data>
+  <metadata name="bindingPackageSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>287, 17</value>
+  </metadata>
   <data name="dataGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -729,6 +725,57 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="da.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="da.HeaderText" xml:space="preserve">
+    <value>Время и дата прихода информации</value>
+  </data>
+  <data name="da.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <metadata name="sn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="sn.HeaderText" xml:space="preserve">
+    <value>Серийный номер ППУ-РМ</value>
+  </data>
+  <metadata name="wr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="wr.HeaderText" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="wr.Width" type="System.Int32, mscorlib">
+    <value>350</value>
+  </data>
+  <metadata name="bindingWarningSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>463, 17</value>
+  </metadata>
+  <data name="dataGridView2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 122</value>
+  </data>
+  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
+    <value>dataGridView2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -755,6 +802,60 @@
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="chart1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="chart1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 122</value>
+  </data>
+  <data name="chart1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chart1.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Name" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart1.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;chart1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>489, 128</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>График потребления</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -785,6 +886,9 @@
   </data>
   <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
@@ -839,6 +943,9 @@
   </data>
   <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 0</value>
@@ -1008,6 +1115,9 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="packageizBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>640, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1019,6 +1129,85 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>758, 371</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA
+        AAD///////////////////////////7+////////////////////////////////////////////////
+        +//9/vL//v/z//7/8//+//P//v/z//7/8//6/fb////7//7/8//+//P//v/z//7/8//+//P//v/z///+
+        8v///P////////////////////////////////////////////////////////z8+///////////////
+        /////////v7//8ZzA//EdAD/xHQA/8R0AP/EdAD/xHQA/8J1Af/6/v7/xHQA/8R0AP/EdAD/xHQA/8R0
+        AP/EdAD/wnQA/////f///////////////////+n///z////++///////////////////////////////
+        /////v7///////////////7/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xHYA//z//f/FdQD/xXUA/8V1
+        AP/FdQD/xXUA/8V1AP/FdAD///////////////////////7+/f//////////////////////////////
+        //////////////z9/////////////////v/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/EdgD//P/9/8V1
+        AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V0AP//////////////////////+/39////8v//////////////
+        //////////////7+/v/////////////////////////+/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8R2
+        AP/8//3/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXQA///////////////////////9/f//////////
+        /////////P79//7+/////////////////////////////////v////7/xXUA/8V1AP/FdQD/xXUA/8V1
+        AP/FdQD/xHYA//z//f/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdAD////////////////////////+
+        /v////////////////////////////7+/v/////////////////6/f7//////////v/FdQD/xXUA/8V1
+        AP/FdQD/xXUA/8V1AP/EdgD//P/9/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V0AP//////////////
+        ///+/v3/+f7//////////////P7////////////////////////////////////9+v/9//7////+/8V1
+        AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8R2AP/8//3/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXQA////
+        /////////////////f/8/v////76//////////////////v+/v///////////////////////f//////
+        //////7/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xHYA//z//f/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1
+        AP/FdAD//////////////////P/7//3//v/9/f3////////////////////////////////////////9
+        /f///////////////v/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/EdgD//P/9/8V1AP/FdQD/xXUA/8V1
+        AP/FdQD/xXUA/8V0AP/////////////////+//3//P/////////9/Pz/////////////////////////
+        ///////////+///////////////+/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8R2AP/8//3/xXUA/8V1
+        AP/FdQD/xXUA/8V1AP/FdQD/xXQA///////////////////////9/////////////v//////////////
+        ///////////////+///9///////////////7////s4E4/8d1AP/DcwD/xnQA/8V0AP/FdQD/xnUA//78
+        /v/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdAD/////////////////+////////f//////////////
+        /v/9/v7//f/y//7++f/+//7///7///7+/f/+/v7//v7+//38/v/5/f7/+P7///7+8f/AcQL/w3MA/8V1
+        AP/GdAD/yHMA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V0AP//////////////////////////////
+        ///////////////+/v/9/////v7//+PInP/BcwP/x3QA/8V1AP/FdQD//v/+/8R0AP++kkX//f7+//3+
+        ///IlET/x3QA/8R1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXQA////////////////////
+        //////////////////////////z///Litv/GcwD/xHUA/8R0Av/FdQD/xXUA/8V1AP/+//7/xXUA/8V0
+        AP/HdAD/6NSh//z8/v///un/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V1AP/FdAD/////////
+        /////////v/9///+9f/+/////P/+//n9/f+4dBP/xXQA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA////
+        /v/FcwD/xXUA/8R1AP/AdAH/wXQE//3+/P/7+OL/xXQA/8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8V0
+        AP////////////////////////////z+/v/9/fz/uXQM/8p2AP/DcwL/xXUA/8V1AP/FdQD/xXUA/8V1
+        AP/FdQD////+/8Z0AP/FdQD/xXUA/8V0AP/LdQD/y3UG//v+/v+6hTT/xXUA/8V1AP/FdQD/xXUA/8V1
+        AP/FdQD/xXQA///////////////////////8//v///78//PUnv/BdAL/xXUA/8V1AP+/dQD/w3cA/8V0
+        AP/GdAD/xXUA/8V1AP////7/xXMA/8V1AP/FdQD/xXUA/8V0AP/CcwL/uoEk//z9/f/GdAD/xXYA/8V1
+        AP/FdQD/xXUA/8V1AP/FdAD////////////////////////+/v/+/vv/xXUA/8d0AP/FdQD/xXUA/8h0
+        AP+7dAH///78/750Bv/FdQD/xXUA/////v/GdAD/xXUA/8V1AP/FdQD/x3QA/8VzAf/KdgD//P38//Pr
+        x//DdgD/xXUA/8V1AP/FdQD/xXUA/8V0AP///////////////////////f7+/8iUSP/FdQD/xXUA/8V1
+        AP/FdQD/xHQA/9K1eP/9//7/2rN3/8V1AP/FdQD///7//8V1AP/FdQD/xXUA/8V1AP/FdQD/xXUA/8d0
+        AP+8fiX//v39/8R0Af/FdQD/xXUA/8V1AP/FdQD/xXQA////////////////////7//+/f7/w3cA/8Z1
+        AP/FdQD/xXUA/8V1AP/EdQD/vXMF//v9///FdgD/xXUA/8V1AP///v//xXQA/8V1AP/FdQD/xXUA/8V1
+        AP/FdQD/xXUA/8RzAP/+/f7/wHQB/8V1AP/FdQD/xXUA/8V1AP/FdAD///7///////////////////7/
+        /v/FdQD/xXUA/8V1AP/FdQD/xXUA/8d0AP/EdAD//v7N/8J2AP/FdQD/xXUA///+///FdQD/xXUA/8V1
+        AP/FdQD/xXUA/8V1AP/FcwL/w3ME//7+///Lo17/xXUA/8V1AP/FdQD/xXUA/8V1AP///v//////////
+        /////////vXc/8V0AP/EdAD/xXUA/8R1AP/GdQD/xHUA/8d0AP/HdAD/x3UA/8V0AP/EdQD//v7//8R0
+        Af/FdQD/xXUA/8V1AP/FdQD/xXUA/8p0AP/IcgH////+////4f/FdQD/xXUA/8V0AP/EcwH/xHMC///+
+        /v/////////////////t4bf/xnQB/8R1AP/EdwD////u///+/P/7/f7/u30j/8RzA//DdAD/xXQA/8Z0
+        Af/+/f//yHMA/8V0Af/FdAH/xHQB/8R0Af/FdAH/x3MB/8Z0A//+/v3///71/8V0Af/FdAH/xHUA/8hy
+        Af++jUX////7/////////////v///+3huv/GdQD/xHUA/8N1AP////7//f///////v/8///////5//3+
+        ///+/v///f3////+/v///v7///7////+/////v////7////+///+//////7+///////9/v////7////+
+        ///+//7//v3////+/v/+//7////////////////////u/8R0AP/HdAD/w3QB////////////////////
+        ///txZr/vHMG/79+Ff/ZoVT/////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////v7/xnMA/8V0AP/FdQD///rL//v/
+        /v////7////+/9awcv/FdQD/x3QA/750A///////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////+/f+9cgL/xXQA/8V1
+        AP/BcQD//v37/////v///f//vnIE/8V1AP/JcgH/zaRU////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////+//7/
+        +//GdAD/xnQA/8V1AP/FdAD/5sSE/+bOlP/FdQD/xXUA/8V0AP/9/Pn/////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////3//v3+//XarP/HdgD/x3UA/8J0A//HcwL/xnMB/8V1AP/FdQD/xnQA//r8////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////8//Hkt//IdQD/xHQB/8J0Av/GcwP/ynUA/79yBP/5/v7////7////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////9//7/+P7///z+///DlEv/w3UA/8BzAv/XtXr///39//3+
+        ///4////////////////////////////////////////////////////////////////////////////
+        ////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -1042,6 +1231,12 @@
     <value>настройкиToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;настройкиToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;подключенияToolStripMenuItem.Name" xml:space="preserve">
+    <value>подключенияToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;подключенияToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;справочникиToolStripMenuItem.Name" xml:space="preserve">
@@ -1072,6 +1267,12 @@
     <value>владельцыToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;владельцыToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;условияПредупрежденийToolStripMenuItem.Name" xml:space="preserve">
+    <value>условияПредупрежденийToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;условияПредупрежденийToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;справкаToolStripMenuItem.Name" xml:space="preserve">
@@ -1128,41 +1329,71 @@
   <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
-    <value>Column1</value>
+  <data name="&gt;&gt;date.Name" xml:space="preserve">
+    <value>date</value>
   </data>
-  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+  <data name="&gt;&gt;date.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
-    <value>Column4</value>
+  <data name="&gt;&gt;r1.Name" xml:space="preserve">
+    <value>r1</value>
   </data>
-  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+  <data name="&gt;&gt;r1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
-    <value>Column5</value>
+  <data name="&gt;&gt;r2.Name" xml:space="preserve">
+    <value>r2</value>
   </data>
-  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+  <data name="&gt;&gt;r2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
-    <value>Column2</value>
+  <data name="&gt;&gt;r1_c.Name" xml:space="preserve">
+    <value>r1_c</value>
   </data>
-  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+  <data name="&gt;&gt;r1_c.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
-    <value>Column3</value>
+  <data name="&gt;&gt;r2_c.Name" xml:space="preserve">
+    <value>r2_c</value>
   </data>
-  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+  <data name="&gt;&gt;r2_c.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;условияПредупрежденийToolStripMenuItem.Name" xml:space="preserve">
-    <value>условияПредупрежденийToolStripMenuItem</value>
+  <data name="&gt;&gt;bindingPackageSource.Name" xml:space="preserve">
+    <value>bindingPackageSource</value>
   </data>
-  <data name="&gt;&gt;условияПредупрежденийToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bindingPackageSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;da.Name" xml:space="preserve">
+    <value>da</value>
+  </data>
+  <data name="&gt;&gt;da.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sn.Name" xml:space="preserve">
+    <value>sn</value>
+  </data>
+  <data name="&gt;&gt;sn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wr.Name" xml:space="preserve">
+    <value>wr</value>
+  </data>
+  <data name="&gt;&gt;wr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bindingWarningSource.Name" xml:space="preserve">
+    <value>bindingWarningSource</value>
+  </data>
+  <data name="&gt;&gt;bindingWarningSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageizBindingSource.Name" xml:space="preserve">
+    <value>packageizBindingSource</value>
+  </data>
+  <data name="&gt;&gt;packageizBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

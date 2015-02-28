@@ -43,7 +43,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.resource_typeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.resource_typeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +76,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.resource_typeBindingNavigatorSaveItem});
+            this.bindingNavigatorDeleteItem});
             this.resource_typeBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.resource_typeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.resource_typeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -86,18 +84,18 @@
             this.resource_typeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.resource_typeBindingNavigator.Name = "resource_typeBindingNavigator";
             this.resource_typeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.resource_typeBindingNavigator.Size = new System.Drawing.Size(444, 25);
+            this.resource_typeBindingNavigator.Size = new System.Drawing.Size(344, 25);
             this.resource_typeBindingNavigator.TabIndex = 0;
             this.resource_typeBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(63, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
@@ -109,12 +107,12 @@
             // 
             // bindingNavigatorDeleteItem
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(55, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
@@ -177,17 +175,10 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // resource_typeBindingNavigatorSaveItem
-            // 
-            this.resource_typeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.resource_typeBindingNavigatorSaveItem.Enabled = false;
-            this.resource_typeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("resource_typeBindingNavigatorSaveItem.Image")));
-            this.resource_typeBindingNavigatorSaveItem.Name = "resource_typeBindingNavigatorSaveItem";
-            this.resource_typeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.resource_typeBindingNavigatorSaveItem.Text = "Save Data";
-            // 
             // resource_typeDataGridView
             // 
+            this.resource_typeDataGridView.AllowUserToAddRows = false;
+            this.resource_typeDataGridView.AllowUserToDeleteRows = false;
             this.resource_typeDataGridView.AutoGenerateColumns = false;
             this.resource_typeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resource_typeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -200,7 +191,8 @@
             this.resource_typeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resource_typeDataGridView.Location = new System.Drawing.Point(0, 25);
             this.resource_typeDataGridView.Name = "resource_typeDataGridView";
-            this.resource_typeDataGridView.Size = new System.Drawing.Size(444, 457);
+            this.resource_typeDataGridView.ReadOnly = true;
+            this.resource_typeDataGridView.Size = new System.Drawing.Size(344, 457);
             this.resource_typeDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -208,6 +200,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
@@ -215,30 +208,35 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
             this.dataGridViewTextBoxColumn2.HeaderText = "Наименование";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "consumptoin_rate";
             this.dataGridViewTextBoxColumn3.HeaderText = "Потребление";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "units_id";
             this.dataGridViewTextBoxColumn4.HeaderText = "units_id";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "units_cost";
             this.dataGridViewTextBoxColumn5.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // EditResources
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 482);
+            this.ClientSize = new System.Drawing.Size(344, 482);
             this.Controls.Add(this.resource_typeDataGridView);
             this.Controls.Add(this.resource_typeBindingNavigator);
             this.Name = "EditResources";
@@ -269,7 +267,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton resource_typeBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView resource_typeDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

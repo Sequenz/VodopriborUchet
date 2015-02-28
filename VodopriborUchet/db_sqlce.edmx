@@ -45,6 +45,14 @@
           <Property Name="resource_type_id" Type="int" Nullable="false" />
           <Property Name="units_per_impulse" Type="float" />
         </EntityType>
+        <EntityType Name="impulse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="weight" Type="int" Nullable="false" />
+          <Property Name="code" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="net">
           <Key>
             <PropertyRef Name="id" />
@@ -75,6 +83,25 @@
           <Property Name="comment" Type="ntext" />
           <Property Name="owner_id" Type="int" />
         </EntityType>
+        <EntityType Name="options">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ip_addr" Type="nvarchar" MaxLength="100" />
+          <Property Name="ip_port" Type="int" />
+          <Property Name="pop_addr" Type="nvarchar" MaxLength="100" />
+          <Property Name="pop_port" Type="int" />
+          <Property Name="pop_mail" Type="nvarchar" MaxLength="100" />
+          <Property Name="pop_passwd" Type="nvarchar" MaxLength="100" />
+          <Property Name="ppu_mail" Type="nvarchar" MaxLength="100" />
+          <Property Name="pop_ssl" Type="bit" Nullable="false" />
+          <Property Name="pop_int" Type="int" />
+          <Property Name="is_mail" Type="bit" Nullable="false" />
+          <Property Name="is_ip" Type="bit" Nullable="false" />
+          <Property Name="new_ip" Type="bit" Nullable="false" />
+          <Property Name="new_ip_addr" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="owners">
           <Key>
             <PropertyRef Name="id" />
@@ -86,6 +113,149 @@
           <Property Name="category_pay_id" Type="int" />
           <Property Name="objects_place_id" Type="int" />
           <Property Name="patronymic" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="package_al">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="na" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="wr" Type="int" Nullable="false" />
+          <Property Name="date_inc" Type="datetime" />
+          <Property Name="ismail" Type="bit" />
+          <Property Name="mail_uid" Type="nvarchar" MaxLength="100" />
+          <Property Name="wr_txt" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="package_iz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="na" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="r1" Type="int" Nullable="false" />
+          <Property Name="r1_0" Type="int" Nullable="false" />
+          <Property Name="r1_1" Type="int" Nullable="false" />
+          <Property Name="r1_2" Type="int" Nullable="false" />
+          <Property Name="r1_3" Type="int" Nullable="false" />
+          <Property Name="r1_4" Type="int" Nullable="false" />
+          <Property Name="r1_5" Type="int" Nullable="false" />
+          <Property Name="r1_6" Type="int" Nullable="false" />
+          <Property Name="r1_7" Type="int" Nullable="false" />
+          <Property Name="r1_8" Type="int" Nullable="false" />
+          <Property Name="r1_9" Type="int" Nullable="false" />
+          <Property Name="r1_10" Type="int" Nullable="false" />
+          <Property Name="r1_11" Type="int" Nullable="false" />
+          <Property Name="r1_12" Type="int" Nullable="false" />
+          <Property Name="r1_13" Type="int" Nullable="false" />
+          <Property Name="r1_14" Type="int" Nullable="false" />
+          <Property Name="r1_15" Type="int" Nullable="false" />
+          <Property Name="r1_16" Type="int" Nullable="false" />
+          <Property Name="r1_17" Type="int" Nullable="false" />
+          <Property Name="r1_18" Type="int" Nullable="false" />
+          <Property Name="r1_19" Type="int" Nullable="false" />
+          <Property Name="r1_20" Type="int" Nullable="false" />
+          <Property Name="r1_21" Type="int" Nullable="false" />
+          <Property Name="r1_22" Type="int" Nullable="false" />
+          <Property Name="r1_23" Type="int" Nullable="false" />
+          <Property Name="r1_24" Type="int" Nullable="false" />
+          <Property Name="r2" Type="int" Nullable="false" />
+          <Property Name="r2_0" Type="int" Nullable="false" />
+          <Property Name="r2_1" Type="int" Nullable="false" />
+          <Property Name="r2_2" Type="int" Nullable="false" />
+          <Property Name="r2_3" Type="int" Nullable="false" />
+          <Property Name="r2_4" Type="int" Nullable="false" />
+          <Property Name="r2_5" Type="int" Nullable="false" />
+          <Property Name="r2_6" Type="int" Nullable="false" />
+          <Property Name="r2_7" Type="int" Nullable="false" />
+          <Property Name="r2_8" Type="int" Nullable="false" />
+          <Property Name="r2_9" Type="int" Nullable="false" />
+          <Property Name="r2_10" Type="int" Nullable="false" />
+          <Property Name="r2_11" Type="int" Nullable="false" />
+          <Property Name="r2_12" Type="int" Nullable="false" />
+          <Property Name="r2_13" Type="int" Nullable="false" />
+          <Property Name="r2_14" Type="int" Nullable="false" />
+          <Property Name="r2_15" Type="int" Nullable="false" />
+          <Property Name="r2_16" Type="int" Nullable="false" />
+          <Property Name="r2_17" Type="int" Nullable="false" />
+          <Property Name="r2_18" Type="int" Nullable="false" />
+          <Property Name="r2_19" Type="int" Nullable="false" />
+          <Property Name="r2_20" Type="int" Nullable="false" />
+          <Property Name="r2_21" Type="int" Nullable="false" />
+          <Property Name="r2_22" Type="int" Nullable="false" />
+          <Property Name="r2_23" Type="int" Nullable="false" />
+          <Property Name="r2_24" Type="int" Nullable="false" />
+          <Property Name="pw1" Type="int" Nullable="false" />
+          <Property Name="pw2" Type="int" Nullable="false" />
+          <Property Name="gp" Type="int" Nullable="false" />
+          <Property Name="te" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="vc" Type="int" Nullable="false" />
+          <Property Name="vg" Type="int" Nullable="false" />
+          <Property Name="ti" Type="int" Nullable="false" />
+          <Property Name="sn1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="sn2" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="da" Type="datetime" Nullable="false" />
+          <Property Name="date_inc" Type="datetime" Nullable="false" />
+          <Property Name="mail_uid" Type="nvarchar" MaxLength="100" />
+          <Property Name="ismail" Type="bit" />
+        </EntityType>
+        <EntityType Name="package_on">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pt" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="na" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="r1" Type="int" Nullable="false" />
+          <Property Name="r2" Type="int" Nullable="false" />
+          <Property Name="pw1" Type="int" Nullable="false" />
+          <Property Name="pw2" Type="int" Nullable="false" />
+          <Property Name="gp" Type="int" Nullable="false" />
+          <Property Name="te" Type="int" Nullable="false" />
+          <Property Name="vc" Type="int" Nullable="false" />
+          <Property Name="vg" Type="int" Nullable="false" />
+          <Property Name="sn1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="sn2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="da" Type="datetime" Nullable="false" />
+          <Property Name="date_time_inc" Type="datetime" Nullable="false" />
+          <Property Name="ti" Type="int" />
+          <Property Name="mail_uid" Type="nvarchar" MaxLength="100" />
+          <Property Name="ismail" Type="bit" />
+        </EntityType>
+        <EntityType Name="package_tm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="na" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="date_inc" Type="datetime" />
+          <Property Name="mail_uid" Type="nvarchar" MaxLength="100" />
+          <Property Name="ismail" Type="bit" />
+        </EntityType>
+        <EntityType Name="package_ts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="na" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="r1" Type="int" Nullable="false" />
+          <Property Name="r2" Type="int" Nullable="false" />
+          <Property Name="pw1" Type="int" Nullable="false" />
+          <Property Name="pw2" Type="int" Nullable="false" />
+          <Property Name="gp" Type="int" Nullable="false" />
+          <Property Name="te" Type="int" Nullable="false" />
+          <Property Name="vc" Type="int" Nullable="false" />
+          <Property Name="vg" Type="int" Nullable="false" />
+          <Property Name="ti" Type="int" Nullable="false" />
+          <Property Name="sn1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sn2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="da" Type="datetime" Nullable="false" />
+          <Property Name="date_time_inc" Type="datetime" Nullable="false" />
+          <Property Name="mail_uid" Type="nvarchar" MaxLength="100" />
+          <Property Name="ismail" Type="bit" />
         </EntityType>
         <EntityType Name="recorder_type">
           <Key>
@@ -130,6 +300,18 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="1" Nullable="false" />
         </EntityType>
+        <EntityType Name="warning_conditions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gprs_sig_min" Type="float" />
+          <Property Name="gprs_sig_max" Type="float" />
+          <Property Name="gprs_mod_min" Type="float" />
+          <Property Name="gprs_mod_max" Type="float" />
+          <Property Name="controller_voltage_min" Type="float" />
+          <Property Name="controller_voltage_max" Type="float" />
+        </EntityType>
         <Association Name="fk_net_id">
           <End Role="net" Type="Self.net" Multiplicity="0..1" />
           <End Role="objects_place" Type="Self.objects_place" Multiplicity="*" />
@@ -146,15 +328,23 @@
           <EntitySet Name="category_pay_type" EntityType="Self.category_pay_type" store:Type="Tables" />
           <EntitySet Name="counters" EntityType="Self.counters" store:Type="Tables" />
           <EntitySet Name="counters_type" EntityType="Self.counters_type" store:Type="Tables" />
+          <EntitySet Name="impulse" EntityType="Self.impulse" store:Type="Tables" />
           <EntitySet Name="net" EntityType="Self.net" store:Type="Tables" />
           <EntitySet Name="object_type" EntityType="Self.object_type" store:Type="Tables" />
           <EntitySet Name="objects_place" EntityType="Self.objects_place" store:Type="Tables" />
+          <EntitySet Name="options" EntityType="Self.options" store:Type="Tables" />
           <EntitySet Name="owners" EntityType="Self.owners" store:Type="Tables" />
+          <EntitySet Name="package_al" EntityType="Self.package_al" store:Type="Tables" />
+          <EntitySet Name="package_iz" EntityType="Self.package_iz" store:Type="Tables" />
+          <EntitySet Name="package_on" EntityType="Self.package_on" store:Type="Tables" />
+          <EntitySet Name="package_tm" EntityType="Self.package_tm" store:Type="Tables" />
+          <EntitySet Name="package_ts" EntityType="Self.package_ts" store:Type="Tables" />
           <EntitySet Name="recorder_type" EntityType="Self.recorder_type" store:Type="Tables" />
           <EntitySet Name="resource_type" EntityType="Self.resource_type" store:Type="Tables" />
           <EntitySet Name="units" EntityType="Self.units" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" />
           <EntitySet Name="users_type" EntityType="Self.users_type" store:Type="Tables" />
+          <EntitySet Name="warning_conditions" EntityType="Self.warning_conditions" store:Type="Tables" />
           <AssociationSet Name="fk_net_id" Association="Self.fk_net_id">
             <End Role="net" EntitySet="net" />
             <End Role="objects_place" EntitySet="objects_place" />
@@ -172,6 +362,7 @@
     <EntitySet Name="object_type" EntityType="db_sqlceModel.object_type" />
     <EntitySet Name="objects_place" EntityType="db_sqlceModel.objects_place" />
     <EntitySet Name="owners" EntityType="db_sqlceModel.owners" />
+    <EntitySet Name="package_on" EntityType="db_sqlceModel.package_on" />
     <EntitySet Name="recorder_type" EntityType="db_sqlceModel.recorder_type" />
     <EntitySet Name="resource_type" EntityType="db_sqlceModel.resource_type" />
     <EntitySet Name="units" EntityType="db_sqlceModel.units" />
@@ -181,6 +372,13 @@
       <End Role="net" EntitySet="net" />
       <End Role="objects_place" EntitySet="objects_place" />
     </AssociationSet>
+          <EntitySet Name="package_ts" EntityType="db_sqlceModel.package_ts" />
+          <EntitySet Name="package_al" EntityType="db_sqlceModel.package_al" />
+          <EntitySet Name="package_tm" EntityType="db_sqlceModel.package_tm" />
+          <EntitySet Name="package_iz" EntityType="db_sqlceModel.package_iz" />
+          <EntitySet Name="options" EntityType="db_sqlceModel.options" />
+          <EntitySet Name="warning_conditions" EntityType="db_sqlceModel.warning_conditions" />
+          <EntitySet Name="impulse" EntityType="db_sqlceModel.impulse" />
   </EntityContainer>
   <EntityType Name="category_pay_type">
     <Key>
@@ -246,14 +444,14 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="object_type_id" Type="Int32" />
-    <Property Name="objects_place_id" Type="Int32" Nullable="true" />
+    <Property Name="objects_place_id" Type="Int32" />
     <Property Name="net_id" Type="Int32" />
     <Property Name="name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="kod_BTI" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="flat_id" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="owner_id" Type="Int32" />
     <NavigationProperty Name="net" Relationship="db_sqlceModel.fk_net_id" FromRole="objects_place" ToRole="net" />
-          <Property Name="owner_id" Type="Int32" Nullable="true" />
   </EntityType>
   <EntityType Name="owners">
     <Key>
@@ -262,10 +460,33 @@
     <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="surname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" Nullable="true" />
-    <Property Name="category_pay_id" Type="Int32" Nullable="true" />
-    <Property Name="objects_place_id" Type="Int32" Nullable="true" />
-          <Property Name="patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Name="tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="category_pay_id" Type="Int32" />
+    <Property Name="objects_place_id" Type="Int32" />
+    <Property Name="patronymic" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="package_on">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="pt" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="na" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="r1" Type="Int32" Nullable="false" />
+    <Property Name="r2" Type="Int32" Nullable="false" />
+    <Property Name="pw1" Type="Int32" Nullable="false" />
+    <Property Name="pw2" Type="Int32" Nullable="false" />
+    <Property Name="gp" Type="Int32" Nullable="false" />
+    <Property Name="te" Type="Int32" Nullable="false" />
+    <Property Name="vc" Type="Int32" Nullable="false" />
+    <Property Name="vg" Type="Int32" Nullable="false" />
+    <Property Name="ti" Type="Int32" />
+    <Property Name="sn1" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="sn2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="da" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="date_time_inc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="mail_uid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ismail" Type="Boolean" />
   </EntityType>
   <EntityType Name="recorder_type">
     <Key>
@@ -322,6 +543,165 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+        <EntityType Name="package_ts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="na" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="r1" Type="Int32" Nullable="false" />
+          <Property Name="r2" Type="Int32" Nullable="false" />
+          <Property Name="pw1" Type="Int32" Nullable="false" />
+          <Property Name="pw2" Type="Int32" Nullable="false" />
+          <Property Name="gp" Type="Int32" Nullable="false" />
+          <Property Name="te" Type="Int32" Nullable="false" />
+          <Property Name="vc" Type="Int32" Nullable="false" />
+          <Property Name="vg" Type="Int32" Nullable="false" />
+          <Property Name="ti" Type="Int32" Nullable="false" />
+          <Property Name="sn1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sn2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="da" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_time_inc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="mail_uid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ismail" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="package_al">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="na" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="wr" Type="Int32" Nullable="false" />
+          <Property Name="date_inc" Type="DateTime" Precision="3" />
+          <Property Name="ismail" Type="Boolean" />
+          <Property Name="mail_uid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="wr_txt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="package_tm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="na" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_inc" Type="DateTime" Precision="3" />
+          <Property Name="mail_uid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ismail" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="package_iz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="na" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="r1" Type="Int32" Nullable="false" />
+          <Property Name="r1_0" Type="Int32" Nullable="false" />
+          <Property Name="r1_1" Type="Int32" Nullable="false" />
+          <Property Name="r1_2" Type="Int32" Nullable="false" />
+          <Property Name="r1_3" Type="Int32" Nullable="false" />
+          <Property Name="r1_4" Type="Int32" Nullable="false" />
+          <Property Name="r1_5" Type="Int32" Nullable="false" />
+          <Property Name="r1_6" Type="Int32" Nullable="false" />
+          <Property Name="r1_7" Type="Int32" Nullable="false" />
+          <Property Name="r1_8" Type="Int32" Nullable="false" />
+          <Property Name="r1_9" Type="Int32" Nullable="false" />
+          <Property Name="r1_10" Type="Int32" Nullable="false" />
+          <Property Name="r1_11" Type="Int32" Nullable="false" />
+          <Property Name="r1_12" Type="Int32" Nullable="false" />
+          <Property Name="r1_13" Type="Int32" Nullable="false" />
+          <Property Name="r1_14" Type="Int32" Nullable="false" />
+          <Property Name="r1_15" Type="Int32" Nullable="false" />
+          <Property Name="r1_16" Type="Int32" Nullable="false" />
+          <Property Name="r1_17" Type="Int32" Nullable="false" />
+          <Property Name="r1_18" Type="Int32" Nullable="false" />
+          <Property Name="r1_19" Type="Int32" Nullable="false" />
+          <Property Name="r1_20" Type="Int32" Nullable="false" />
+          <Property Name="r1_21" Type="Int32" Nullable="false" />
+          <Property Name="r1_22" Type="Int32" Nullable="false" />
+          <Property Name="r1_23" Type="Int32" Nullable="false" />
+          <Property Name="r1_24" Type="Int32" Nullable="false" />
+          <Property Name="r2" Type="Int32" Nullable="false" />
+          <Property Name="r2_0" Type="Int32" Nullable="false" />
+          <Property Name="r2_1" Type="Int32" Nullable="false" />
+          <Property Name="r2_2" Type="Int32" Nullable="false" />
+          <Property Name="r2_3" Type="Int32" Nullable="false" />
+          <Property Name="r2_4" Type="Int32" Nullable="false" />
+          <Property Name="r2_5" Type="Int32" Nullable="false" />
+          <Property Name="r2_6" Type="Int32" Nullable="false" />
+          <Property Name="r2_7" Type="Int32" Nullable="false" />
+          <Property Name="r2_8" Type="Int32" Nullable="false" />
+          <Property Name="r2_9" Type="Int32" Nullable="false" />
+          <Property Name="r2_10" Type="Int32" Nullable="false" />
+          <Property Name="r2_11" Type="Int32" Nullable="false" />
+          <Property Name="r2_12" Type="Int32" Nullable="false" />
+          <Property Name="r2_13" Type="Int32" Nullable="false" />
+          <Property Name="r2_14" Type="Int32" Nullable="false" />
+          <Property Name="r2_15" Type="Int32" Nullable="false" />
+          <Property Name="r2_16" Type="Int32" Nullable="false" />
+          <Property Name="r2_17" Type="Int32" Nullable="false" />
+          <Property Name="r2_18" Type="Int32" Nullable="false" />
+          <Property Name="r2_19" Type="Int32" Nullable="false" />
+          <Property Name="r2_20" Type="Int32" Nullable="false" />
+          <Property Name="r2_21" Type="Int32" Nullable="false" />
+          <Property Name="r2_22" Type="Int32" Nullable="false" />
+          <Property Name="r2_23" Type="Int32" Nullable="false" />
+          <Property Name="r2_24" Type="Int32" Nullable="false" />
+          <Property Name="pw1" Type="Int32" Nullable="false" />
+          <Property Name="pw2" Type="Int32" Nullable="false" />
+          <Property Name="gp" Type="Int32" Nullable="false" />
+          <Property Name="te" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vc" Type="Int32" Nullable="false" />
+          <Property Name="vg" Type="Int32" Nullable="false" />
+          <Property Name="ti" Type="Int32" Nullable="false" />
+          <Property Name="sn1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sn2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="da" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_inc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="mail_uid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ismail" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="options">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ip_addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ip_port" Type="Int32" />
+          <Property Name="pop_addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pop_port" Type="Int32" />
+          <Property Name="pop_mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pop_passwd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ppu_mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pop_ssl" Type="Boolean" Nullable="false" />
+          <Property Name="pop_int" Type="Int32" />
+          <Property Name="is_mail" Type="Boolean" Nullable="false" />
+          <Property Name="is_ip" Type="Boolean" Nullable="false" />
+          <Property Name="new_ip" Type="Boolean" Nullable="false" />
+          <Property Name="new_ip_addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="warning_conditions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gprs_sig_min" Type="Double" />
+          <Property Name="gprs_sig_max" Type="Double" />
+          <Property Name="gprs_mod_min" Type="Double" />
+          <Property Name="gprs_mod_max" Type="Double" />
+          <Property Name="controller_voltage_min" Type="Double" />
+          <Property Name="controller_voltage_max" Type="Double" />
+        </EntityType>
+        <EntityType Name="impulse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="weight" Type="Int32" Nullable="false" />
+          <Property Name="code" Type="Int32" Nullable="false" />
+        </EntityType>
 </Schema>
 </edmx:ConceptualModels>
 <!-- C-S mapping content -->
@@ -393,8 +773,7 @@
     <EntitySetMapping Name="objects_place">
       <EntityTypeMapping TypeName="db_sqlceModel.objects_place">
         <MappingFragment StoreEntitySet="objects_place">
-                <ScalarProperty Name="owner_id" ColumnName="owner_id" />
-                <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="object_type_id" ColumnName="object_type_id" />
           <ScalarProperty Name="objects_place_id" ColumnName="objects_place_id" />
           <ScalarProperty Name="net_id" ColumnName="net_id" />
@@ -402,19 +781,44 @@
           <ScalarProperty Name="kod_BTI" ColumnName="kod_BTI" />
           <ScalarProperty Name="flat_id" ColumnName="flat_id" />
           <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="owner_id" ColumnName="owner_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="owners">
       <EntityTypeMapping TypeName="db_sqlceModel.owners">
         <MappingFragment StoreEntitySet="owners">
-          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
-                <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="surname" ColumnName="surname" />
           <ScalarProperty Name="tel" ColumnName="tel" />
           <ScalarProperty Name="category_pay_id" ColumnName="category_pay_id" />
           <ScalarProperty Name="objects_place_id" ColumnName="objects_place_id" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="package_on">
+      <EntityTypeMapping TypeName="db_sqlceModel.package_on">
+        <MappingFragment StoreEntitySet="package_on">
+          <ScalarProperty Name="ismail" ColumnName="ismail" />
+                <ScalarProperty Name="mail_uid" ColumnName="mail_uid" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="pt" ColumnName="pt" />
+          <ScalarProperty Name="na" ColumnName="na" />
+          <ScalarProperty Name="r1" ColumnName="r1" />
+          <ScalarProperty Name="r2" ColumnName="r2" />
+          <ScalarProperty Name="pw1" ColumnName="pw1" />
+          <ScalarProperty Name="pw2" ColumnName="pw2" />
+          <ScalarProperty Name="gp" ColumnName="gp" />
+          <ScalarProperty Name="te" ColumnName="te" />
+          <ScalarProperty Name="vc" ColumnName="vc" />
+          <ScalarProperty Name="vg" ColumnName="vg" />
+          <ScalarProperty Name="ti" ColumnName="ti" />
+          <ScalarProperty Name="sn1" ColumnName="sn1" />
+          <ScalarProperty Name="sn2" ColumnName="sn2" />
+          <ScalarProperty Name="da" ColumnName="da" />
+          <ScalarProperty Name="date_time_inc" ColumnName="date_time_inc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -466,6 +870,172 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+          <EntitySetMapping Name="package_ts">
+            <EntityTypeMapping TypeName="db_sqlceModel.package_ts">
+              <MappingFragment StoreEntitySet="package_ts">
+                <ScalarProperty Name="ismail" ColumnName="ismail" />
+                <ScalarProperty Name="mail_uid" ColumnName="mail_uid" />
+                <ScalarProperty Name="date_time_inc" ColumnName="date_time_inc" />
+                <ScalarProperty Name="da" ColumnName="da" />
+                <ScalarProperty Name="sn2" ColumnName="sn2" />
+                <ScalarProperty Name="sn1" ColumnName="sn1" />
+                <ScalarProperty Name="ti" ColumnName="ti" />
+                <ScalarProperty Name="vg" ColumnName="vg" />
+                <ScalarProperty Name="vc" ColumnName="vc" />
+                <ScalarProperty Name="te" ColumnName="te" />
+                <ScalarProperty Name="gp" ColumnName="gp" />
+                <ScalarProperty Name="pw2" ColumnName="pw2" />
+                <ScalarProperty Name="pw1" ColumnName="pw1" />
+                <ScalarProperty Name="r2" ColumnName="r2" />
+                <ScalarProperty Name="r1" ColumnName="r1" />
+                <ScalarProperty Name="na" ColumnName="na" />
+                <ScalarProperty Name="pt" ColumnName="pt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="package_al">
+            <EntityTypeMapping TypeName="db_sqlceModel.package_al">
+              <MappingFragment StoreEntitySet="package_al">
+                <ScalarProperty Name="wr_txt" ColumnName="wr_txt" />
+                <ScalarProperty Name="mail_uid" ColumnName="mail_uid" />
+                <ScalarProperty Name="ismail" ColumnName="ismail" />
+                <ScalarProperty Name="date_inc" ColumnName="date_inc" />
+                <ScalarProperty Name="wr" ColumnName="wr" />
+                <ScalarProperty Name="na" ColumnName="na" />
+                <ScalarProperty Name="pt" ColumnName="pt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="package_tm">
+            <EntityTypeMapping TypeName="db_sqlceModel.package_tm">
+              <MappingFragment StoreEntitySet="package_tm">
+                <ScalarProperty Name="ismail" ColumnName="ismail" />
+                <ScalarProperty Name="mail_uid" ColumnName="mail_uid" />
+                <ScalarProperty Name="date_inc" ColumnName="date_inc" />
+                <ScalarProperty Name="na" ColumnName="na" />
+                <ScalarProperty Name="pt" ColumnName="pt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="package_iz">
+            <EntityTypeMapping TypeName="db_sqlceModel.package_iz">
+              <MappingFragment StoreEntitySet="package_iz">
+                <ScalarProperty Name="ismail" ColumnName="ismail" />
+                <ScalarProperty Name="mail_uid" ColumnName="mail_uid" />
+                <ScalarProperty Name="date_inc" ColumnName="date_inc" />
+                <ScalarProperty Name="da" ColumnName="da" />
+                <ScalarProperty Name="sn2" ColumnName="sn2" />
+                <ScalarProperty Name="sn1" ColumnName="sn1" />
+                <ScalarProperty Name="ti" ColumnName="ti" />
+                <ScalarProperty Name="vg" ColumnName="vg" />
+                <ScalarProperty Name="vc" ColumnName="vc" />
+                <ScalarProperty Name="te" ColumnName="te" />
+                <ScalarProperty Name="gp" ColumnName="gp" />
+                <ScalarProperty Name="pw2" ColumnName="pw2" />
+                <ScalarProperty Name="pw1" ColumnName="pw1" />
+                <ScalarProperty Name="r2_24" ColumnName="r2_24" />
+                <ScalarProperty Name="r2_23" ColumnName="r2_23" />
+                <ScalarProperty Name="r2_22" ColumnName="r2_22" />
+                <ScalarProperty Name="r2_21" ColumnName="r2_21" />
+                <ScalarProperty Name="r2_20" ColumnName="r2_20" />
+                <ScalarProperty Name="r2_19" ColumnName="r2_19" />
+                <ScalarProperty Name="r2_18" ColumnName="r2_18" />
+                <ScalarProperty Name="r2_17" ColumnName="r2_17" />
+                <ScalarProperty Name="r2_16" ColumnName="r2_16" />
+                <ScalarProperty Name="r2_15" ColumnName="r2_15" />
+                <ScalarProperty Name="r2_14" ColumnName="r2_14" />
+                <ScalarProperty Name="r2_13" ColumnName="r2_13" />
+                <ScalarProperty Name="r2_12" ColumnName="r2_12" />
+                <ScalarProperty Name="r2_11" ColumnName="r2_11" />
+                <ScalarProperty Name="r2_10" ColumnName="r2_10" />
+                <ScalarProperty Name="r2_9" ColumnName="r2_9" />
+                <ScalarProperty Name="r2_8" ColumnName="r2_8" />
+                <ScalarProperty Name="r2_7" ColumnName="r2_7" />
+                <ScalarProperty Name="r2_6" ColumnName="r2_6" />
+                <ScalarProperty Name="r2_5" ColumnName="r2_5" />
+                <ScalarProperty Name="r2_4" ColumnName="r2_4" />
+                <ScalarProperty Name="r2_3" ColumnName="r2_3" />
+                <ScalarProperty Name="r2_2" ColumnName="r2_2" />
+                <ScalarProperty Name="r2_1" ColumnName="r2_1" />
+                <ScalarProperty Name="r2_0" ColumnName="r2_0" />
+                <ScalarProperty Name="r2" ColumnName="r2" />
+                <ScalarProperty Name="r1_24" ColumnName="r1_24" />
+                <ScalarProperty Name="r1_23" ColumnName="r1_23" />
+                <ScalarProperty Name="r1_22" ColumnName="r1_22" />
+                <ScalarProperty Name="r1_21" ColumnName="r1_21" />
+                <ScalarProperty Name="r1_20" ColumnName="r1_20" />
+                <ScalarProperty Name="r1_19" ColumnName="r1_19" />
+                <ScalarProperty Name="r1_18" ColumnName="r1_18" />
+                <ScalarProperty Name="r1_17" ColumnName="r1_17" />
+                <ScalarProperty Name="r1_16" ColumnName="r1_16" />
+                <ScalarProperty Name="r1_15" ColumnName="r1_15" />
+                <ScalarProperty Name="r1_14" ColumnName="r1_14" />
+                <ScalarProperty Name="r1_13" ColumnName="r1_13" />
+                <ScalarProperty Name="r1_12" ColumnName="r1_12" />
+                <ScalarProperty Name="r1_11" ColumnName="r1_11" />
+                <ScalarProperty Name="r1_10" ColumnName="r1_10" />
+                <ScalarProperty Name="r1_9" ColumnName="r1_9" />
+                <ScalarProperty Name="r1_8" ColumnName="r1_8" />
+                <ScalarProperty Name="r1_7" ColumnName="r1_7" />
+                <ScalarProperty Name="r1_6" ColumnName="r1_6" />
+                <ScalarProperty Name="r1_5" ColumnName="r1_5" />
+                <ScalarProperty Name="r1_4" ColumnName="r1_4" />
+                <ScalarProperty Name="r1_3" ColumnName="r1_3" />
+                <ScalarProperty Name="r1_2" ColumnName="r1_2" />
+                <ScalarProperty Name="r1_1" ColumnName="r1_1" />
+                <ScalarProperty Name="r1_0" ColumnName="r1_0" />
+                <ScalarProperty Name="r1" ColumnName="r1" />
+                <ScalarProperty Name="na" ColumnName="na" />
+                <ScalarProperty Name="pt" ColumnName="pt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="options">
+            <EntityTypeMapping TypeName="db_sqlceModel.options">
+              <MappingFragment StoreEntitySet="options">
+                <ScalarProperty Name="new_ip_addr" ColumnName="new_ip_addr" />
+                <ScalarProperty Name="new_ip" ColumnName="new_ip" />
+                <ScalarProperty Name="is_ip" ColumnName="is_ip" />
+                <ScalarProperty Name="is_mail" ColumnName="is_mail" />
+                <ScalarProperty Name="pop_int" ColumnName="pop_int" />
+                <ScalarProperty Name="pop_ssl" ColumnName="pop_ssl" />
+                <ScalarProperty Name="ppu_mail" ColumnName="ppu_mail" />
+                <ScalarProperty Name="pop_passwd" ColumnName="pop_passwd" />
+                <ScalarProperty Name="pop_mail" ColumnName="pop_mail" />
+                <ScalarProperty Name="pop_port" ColumnName="pop_port" />
+                <ScalarProperty Name="pop_addr" ColumnName="pop_addr" />
+                <ScalarProperty Name="ip_port" ColumnName="ip_port" />
+                <ScalarProperty Name="ip_addr" ColumnName="ip_addr" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="warning_conditions">
+            <EntityTypeMapping TypeName="db_sqlceModel.warning_conditions">
+              <MappingFragment StoreEntitySet="warning_conditions">
+                <ScalarProperty Name="controller_voltage_max" ColumnName="controller_voltage_max" />
+                <ScalarProperty Name="controller_voltage_min" ColumnName="controller_voltage_min" />
+                <ScalarProperty Name="gprs_mod_max" ColumnName="gprs_mod_max" />
+                <ScalarProperty Name="gprs_mod_min" ColumnName="gprs_mod_min" />
+                <ScalarProperty Name="gprs_sig_max" ColumnName="gprs_sig_max" />
+                <ScalarProperty Name="gprs_sig_min" ColumnName="gprs_sig_min" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="impulse">
+            <EntityTypeMapping TypeName="db_sqlceModel.impulse">
+              <MappingFragment StoreEntitySet="impulse">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
 </edmx:Mappings>
@@ -475,20 +1045,28 @@
 <Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
 <edmx:Options><DesignerInfoPropertySet><DesignerProperty Name="ValidateOnBuild" Value="True" /><DesignerProperty Name="EnablePluralization" Value="False" /><DesignerProperty Name="IncludeForeignKeysInModel" Value="True" /><DesignerProperty Name="UseLegacyProvider" Value="False" /><DesignerProperty Name="CodeGenerationStrategy" Value="None" /></DesignerInfoPropertySet></edmx:Options>
 <edmx:Diagrams >
-      <Diagram DiagramId="87acfe667d194ab5b6ef9d6774beb413" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="db_sqlceModel.category_pay_type" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.counters" Width="2.375" PointX="3" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.counters_type" Width="1.5" PointX="0.5" PointY="6.125" IsExpanded="true" />
+      <Diagram DiagramId="42750db47fa44631bd6331c94791b036" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="db_sqlceModel.category_pay_type" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.counters" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.counters_type" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.net" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.object_type" Width="1.5" PointX="5.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.objects_place" Width="1.5" PointX="3.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.object_type" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.objects_place" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.owners" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.recorder_type" Width="1.5" PointX="6.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_sqlceModel.resource_type" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.package_on" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.recorder_type" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_sqlceModel.resource_type" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.units" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.users" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_sqlceModel.users_type" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="db_sqlceModel.fk_net_id" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_sqlceModel.package_ts" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.package_al" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.package_tm" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.package_iz" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.options" Width="1.5" PointX="3.375" PointY="13.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.warning_conditions" Width="1.5" PointX="5.375" PointY="13.75" />
+        <EntityTypeShape EntityType="db_sqlceModel.impulse" Width="1.5" PointX="12.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
 </edmx:Designer></edmx:Edmx>

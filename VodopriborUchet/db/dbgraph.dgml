@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="db_sqlce.sdf" Category="Database" Group="Expanded" />
+    <Node Id="category_pay_type" Label="category_pay_type" Category="Table" Group="Collapsed" />
+    <Node Id="category_pay_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="category_pay_type_name" Label="name" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="category_pay_type_pay_rate" Label="pay_rate" Category="Field" Description="float" />
+    <Node Id="counters" Label="counters" Category="Table" Group="Collapsed" />
+    <Node Id="counters_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="counters_date_start" Label="date_start" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_date_end" Label="date_end" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_chnannel" Label="chnannel" Category="Field Optional" Description="int" />
+    <Node Id="counters_objects_place_id" Label="objects_place_id" Category="Field Optional" Description="int" />
+    <Node Id="counters_owner_id" Label="owner_id" Category="Field Optional" Description="int" />
+    <Node Id="counters_date_act" Label="date_act" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_value_act" Label="value_act" Category="Field Optional" Description="float" />
+    <Node Id="counters_net_id" Label="net_id" Category="Field Optional" Description="int" />
+    <Node Id="counters_serial_amspi" Label="serial_amspi" Category="Field Optional" Description="nvarchar(25)" />
+    <Node Id="counters_serial_r1" Label="serial_r1" Category="Field Optional" Description="nvarchar(25)" />
+    <Node Id="counters_serial_r2" Label="serial_r2" Category="Field Optional" Description="nvarchar(25)" />
+    <Node Id="counters_date_calibration_r1" Label="date_calibration_r1" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_date_calibration_r2" Label="date_calibration_r2" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_date_init_calibration_r2" Label="date_init_calibration_r2" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_date_init_calibration_r1" Label="date_init_calibration_r1" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_date_calibration_amspi" Label="date_calibration_amspi" Category="Field Optional" Description="datetime" />
+    <Node Id="counters_diameter_r1" Label="diameter_r1" Category="Field Optional" Description="int" />
+    <Node Id="counters_diameter_r2" Label="diameter_r2" Category="Field Optional" Description="int" />
+    <Node Id="counters_type" Label="counters_type" Category="Table" Group="Collapsed" />
+    <Node Id="counters_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="counters_type_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="counters_type_resource_type_id" Label="resource_type_id" Category="Field" Description="int" />
+    <Node Id="counters_type_units_per_impulse" Label="units_per_impulse" Category="Field Optional" Description="float" />
+    <Node Id="net" Label="net" Category="Table" Group="Collapsed" />
+    <Node Id="net_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="net_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="net_commnet" Label="commnet" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="object_type" Label="object_type" Category="Table" Group="Collapsed" />
+    <Node Id="object_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="object_type_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="object_type_comment" Label="comment" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="objects_place" Label="objects_place" Category="Table" Group="Collapsed" />
+    <Node Id="objects_place_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="objects_place_object_type_id" Label="object_type_id" Category="Field Optional" Description="int" />
+    <Node Id="objects_place_objects_place_id" Label="objects_place_id" Category="Field Optional" Description="int" />
+    <Node Id="objects_place_net_id" Label="net_id" Category="Field Foreign" Description="int" />
+    <Node Id="objects_place_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="objects_place_kod_BTI" Label="kod_BTI" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="objects_place_flat_id" Label="flat_id" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="objects_place_comment" Label="comment" Category="Field Optional" Description="ntext" />
+    <Node Id="owners" Label="owners" Category="Table" Group="Collapsed" />
+    <Node Id="owners_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="owners_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="owners_surname" Label="surname" Category="Field" Description="nvarchar(1)" />
+    <Node Id="owners_tel" Label="tel" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="owners_category_pay_id" Label="category_pay_id" Category="Field" Description="int" />
+    <Node Id="owners_objects_place_id" Label="objects_place_id" Category="Field Optional" Description="int" />
+    <Node Id="recorder_type" Label="recorder_type" Category="Table" Group="Collapsed" />
+    <Node Id="recorder_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="recorder_type_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="recorder_type_comment" Label="comment" Category="Field Optional" Description="nvarchar(1)" />
+    <Node Id="resource_type" Label="resource_type" Category="Table" Group="Collapsed" />
+    <Node Id="resource_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="resource_type_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="resource_type_consumptoin_rate" Label="consumptoin_rate" Category="Field" Description="float" />
+    <Node Id="resource_type_units_id" Label="units_id" Category="Field" Description="int" />
+    <Node Id="resource_type_units_cost" Label="units_cost" Category="Field Optional" Description="money" />
+    <Node Id="units" Label="units" Category="Table" Group="Collapsed" />
+    <Node Id="units_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="units_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="users" Label="users" Category="Table" Group="Collapsed" />
+    <Node Id="users_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="users_login" Label="login" Category="Field" Description="nvarchar(1)" />
+    <Node Id="users_name" Label="name" Category="Field" Description="nvarchar(1)" />
+    <Node Id="users_surname" Label="surname" Category="Field" Description="nvarchar(1)" />
+    <Node Id="users_user_type_id" Label="user_type_id" Category="Field" Description="int" />
+    <Node Id="users_passwd" Label="passwd" Category="Field" Description="nvarchar(1)" />
+    <Node Id="users_type" Label="users_type" Category="Table" Group="Collapsed" />
+    <Node Id="users_type_id" Label="id" Category="Field Primary" Description="int" />
+    <Node Id="users_type_name" Label="name" Category="Field" Description="nvarchar(1)" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="category_pay_type" Category="Contains" />
+    <Link Source="category_pay_type" Target="category_pay_type_id" Category="Contains" />
+    <Link Source="category_pay_type" Target="category_pay_type_name" Category="Contains" />
+    <Link Source="category_pay_type" Target="category_pay_type_pay_rate" Category="Contains" />
+    <Link Source="Database" Target="counters" Category="Contains" />
+    <Link Source="counters" Target="counters_id" Category="Contains" />
+    <Link Source="counters" Target="counters_date_start" Category="Contains" />
+    <Link Source="counters" Target="counters_date_end" Category="Contains" />
+    <Link Source="counters" Target="counters_chnannel" Category="Contains" />
+    <Link Source="counters" Target="counters_objects_place_id" Category="Contains" />
+    <Link Source="counters" Target="counters_owner_id" Category="Contains" />
+    <Link Source="counters" Target="counters_date_act" Category="Contains" />
+    <Link Source="counters" Target="counters_value_act" Category="Contains" />
+    <Link Source="counters" Target="counters_net_id" Category="Contains" />
+    <Link Source="counters" Target="counters_serial_amspi" Category="Contains" />
+    <Link Source="counters" Target="counters_serial_r1" Category="Contains" />
+    <Link Source="counters" Target="counters_serial_r2" Category="Contains" />
+    <Link Source="counters" Target="counters_date_calibration_r1" Category="Contains" />
+    <Link Source="counters" Target="counters_date_calibration_r2" Category="Contains" />
+    <Link Source="counters" Target="counters_date_init_calibration_r2" Category="Contains" />
+    <Link Source="counters" Target="counters_date_init_calibration_r1" Category="Contains" />
+    <Link Source="counters" Target="counters_date_calibration_amspi" Category="Contains" />
+    <Link Source="counters" Target="counters_diameter_r1" Category="Contains" />
+    <Link Source="counters" Target="counters_diameter_r2" Category="Contains" />
+    <Link Source="Database" Target="counters_type" Category="Contains" />
+    <Link Source="counters_type" Target="counters_type_id" Category="Contains" />
+    <Link Source="counters_type" Target="counters_type_name" Category="Contains" />
+    <Link Source="counters_type" Target="counters_type_resource_type_id" Category="Contains" />
+    <Link Source="counters_type" Target="counters_type_units_per_impulse" Category="Contains" />
+    <Link Source="Database" Target="net" Category="Contains" />
+    <Link Source="net" Target="net_id" Category="Contains" />
+    <Link Source="net" Target="net_name" Category="Contains" />
+    <Link Source="net" Target="net_commnet" Category="Contains" />
+    <Link Source="Database" Target="object_type" Category="Contains" />
+    <Link Source="object_type" Target="object_type_id" Category="Contains" />
+    <Link Source="object_type" Target="object_type_name" Category="Contains" />
+    <Link Source="object_type" Target="object_type_comment" Category="Contains" />
+    <Link Source="Database" Target="objects_place" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_id" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_object_type_id" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_objects_place_id" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_net_id" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_name" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_kod_BTI" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_flat_id" Category="Contains" />
+    <Link Source="objects_place" Target="objects_place_comment" Category="Contains" />
+    <Link Source="objects_place_net_id" Target="net_id" Label="fk_net_id" Category="Foreign Key" />
+    <Link Source="Database" Target="owners" Category="Contains" />
+    <Link Source="owners" Target="owners_id" Category="Contains" />
+    <Link Source="owners" Target="owners_name" Category="Contains" />
+    <Link Source="owners" Target="owners_surname" Category="Contains" />
+    <Link Source="owners" Target="owners_tel" Category="Contains" />
+    <Link Source="owners" Target="owners_category_pay_id" Category="Contains" />
+    <Link Source="owners" Target="owners_objects_place_id" Category="Contains" />
+    <Link Source="Database" Target="recorder_type" Category="Contains" />
+    <Link Source="recorder_type" Target="recorder_type_id" Category="Contains" />
+    <Link Source="recorder_type" Target="recorder_type_name" Category="Contains" />
+    <Link Source="recorder_type" Target="recorder_type_comment" Category="Contains" />
+    <Link Source="Database" Target="resource_type" Category="Contains" />
+    <Link Source="resource_type" Target="resource_type_id" Category="Contains" />
+    <Link Source="resource_type" Target="resource_type_name" Category="Contains" />
+    <Link Source="resource_type" Target="resource_type_consumptoin_rate" Category="Contains" />
+    <Link Source="resource_type" Target="resource_type_units_id" Category="Contains" />
+    <Link Source="resource_type" Target="resource_type_units_cost" Category="Contains" />
+    <Link Source="Database" Target="units" Category="Contains" />
+    <Link Source="units" Target="units_id" Category="Contains" />
+    <Link Source="units" Target="units_name" Category="Contains" />
+    <Link Source="Database" Target="users" Category="Contains" />
+    <Link Source="users" Target="users_id" Category="Contains" />
+    <Link Source="users" Target="users_login" Category="Contains" />
+    <Link Source="users" Target="users_name" Category="Contains" />
+    <Link Source="users" Target="users_surname" Category="Contains" />
+    <Link Source="users" Target="users_user_type_id" Category="Contains" />
+    <Link Source="users" Target="users_passwd" Category="Contains" />
+    <Link Source="Database" Target="users_type" Category="Contains" />
+    <Link Source="users_type" Target="users_type_id" Category="Contains" />
+    <Link Source="users_type" Target="users_type_name" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

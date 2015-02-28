@@ -32,10 +32,18 @@ namespace VodopriborUchet
         public virtual DbSet<object_type> object_type { get; set; }
         public virtual DbSet<objects_place> objects_place { get; set; }
         public virtual DbSet<owners> owners { get; set; }
+        public virtual DbSet<package_on> package_on { get; set; }
         public virtual DbSet<recorder_type> recorder_type { get; set; }
         public virtual DbSet<resource_type> resource_type { get; set; }
         public virtual DbSet<units> units { get; set; }
         public virtual DbSet<users> users { get; set; }
         public virtual DbSet<users_type> users_type { get; set; }
+        public virtual DbSet<package_ts> package_ts { get; set; }
+        public virtual DbSet<package_al> package_al { get; set; }
+        public virtual DbSet<package_tm> package_tm { get; set; }
+        public virtual DbSet<package_iz> package_iz { get; set; }
+        public virtual DbSet<options> options { get; set; }
+        public virtual DbSet<warning_conditions> warning_conditions { get; set; }
+        public virtual DbSet<impulse> impulse { get; set; }
     }
 }
